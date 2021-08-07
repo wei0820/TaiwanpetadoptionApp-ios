@@ -15,5 +15,7 @@ target 'TaiwanpetadoptionApp-ios' do
   target 'TaiwanpetadoptionApp-iosUITests' do
     # Pods for testing
   end
+pod 'Alamofire', '~> 5.4'
 
+pod 'Firebase/Analytics'
 end

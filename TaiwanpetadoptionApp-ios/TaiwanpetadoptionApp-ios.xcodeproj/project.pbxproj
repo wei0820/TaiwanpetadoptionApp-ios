@@ -17,6 +17,7 @@
 		B74EB8B226BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8B126BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift */; };
 		B74EB8BD26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */; };
 		B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CA26BEC97100FFC732 /* .gitignore */; };
+		B74EB8CD26BED10F00FFC732 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */; };
 		C567CCFC731BA83EEA8C911C /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_iosUITests.swift; sourceTree = "<group>"; };
 		B74EB8BE26BEC76000FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74EB8CA26BEC97100FFC732 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		B74EB89926BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */ = {
 			isa = PBXGroup;
 			children = (
+				B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */,
 				B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */,
 				B74EB89E26BEC75E00FFC732 /* ViewController.swift */,
 				B74EB8A026BEC75E00FFC732 /* Main.storyboard */,
@@ -179,6 +182,7 @@
 				B74EB89326BEC75E00FFC732 /* Sources */,
 				B74EB89426BEC75E00FFC732 /* Frameworks */,
 				B74EB89526BEC75E00FFC732 /* Resources */,
+				0D0A6D4C779EBD0F51182084 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -216,6 +220,7 @@
 				B74EB8B426BEC76000FFC732 /* Sources */,
 				B74EB8B526BEC76000FFC732 /* Frameworks */,
 				B74EB8B626BEC76000FFC732 /* Resources */,
+				AB6D99563222F95528174E24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74EB8CD26BED10F00FFC732 /* GoogleService-Info.plist in Resources */,
 				B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */,
 				B74EB8A726BEC75F00FFC732 /* LaunchScreen.storyboard in Resources */,
 				B74EB8A426BEC75F00FFC732 /* Assets.xcassets in Resources */,
@@ -298,6 +304,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D0A6D4C779EBD0F51182084 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		10357613A4C8CD6E3FE0E882 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +363,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB6D99563222F95528174E24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B20D9D49294549DBE4B2C8C8 /* [CP] Check Pods Manifest.lock */ = {
