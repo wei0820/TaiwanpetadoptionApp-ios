@@ -10,7 +10,6 @@
 		23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */; };
 		3A0FA8EF4EE3AC219F12913F /* Pods_TaiwanpetadoptionApp_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2D1E383BCACCBDB138349 /* Pods_TaiwanpetadoptionApp_iosTests.framework */; };
 		B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */; };
-		B74EB89D26BEC75E00FFC732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89C26BEC75E00FFC732 /* SceneDelegate.swift */; };
 		B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89E26BEC75E00FFC732 /* ViewController.swift */; };
 		B74EB8A226BEC75E00FFC732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A026BEC75E00FFC732 /* Main.storyboard */; };
 		B74EB8A426BEC75F00FFC732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A326BEC75F00FFC732 /* Assets.xcassets */; };
@@ -50,7 +49,6 @@
 		B635109B42AB236F0B4C3D4D /* Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 		B74EB89726BEC75E00FFC732 /* TaiwanpetadoptionApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaiwanpetadoptionApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B74EB89C26BEC75E00FFC732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B74EB89E26BEC75E00FFC732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B74EB8A126BEC75E00FFC732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B74EB8A326BEC75F00FFC732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */,
-				B74EB89C26BEC75E00FFC732 /* SceneDelegate.swift */,
 				B74EB89E26BEC75E00FFC732 /* ViewController.swift */,
 				B74EB8A026BEC75E00FFC732 /* Main.storyboard */,
 				B74EB8A326BEC75F00FFC732 /* Assets.xcassets */,
@@ -376,7 +373,6 @@
 			files = (
 				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
 				B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */,
-				B74EB89D26BEC75E00FFC732 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
