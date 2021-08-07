@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */; };
+		3A0FA8EF4EE3AC219F12913F /* Pods_TaiwanpetadoptionApp_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2D1E383BCACCBDB138349 /* Pods_TaiwanpetadoptionApp_iosTests.framework */; };
+		B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */; };
+		B74EB89D26BEC75E00FFC732 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89C26BEC75E00FFC732 /* SceneDelegate.swift */; };
+		B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89E26BEC75E00FFC732 /* ViewController.swift */; };
+		B74EB8A226BEC75E00FFC732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A026BEC75E00FFC732 /* Main.storyboard */; };
+		B74EB8A426BEC75F00FFC732 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A326BEC75F00FFC732 /* Assets.xcassets */; };
+		B74EB8A726BEC75F00FFC732 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A526BEC75F00FFC732 /* LaunchScreen.storyboard */; };
+		B74EB8B226BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8B126BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift */; };
+		B74EB8BD26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */; };
+		B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CA26BEC97100FFC732 /* .gitignore */; };
+		C567CCFC731BA83EEA8C911C /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B74EB8AE26BEC75F00FFC732 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EB88F26BEC75E00FFC732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B74EB89626BEC75E00FFC732;
+			remoteInfo = "TaiwanpetadoptionApp-ios";
+		};
+		B74EB8B926BEC76000FFC732 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EB88F26BEC75E00FFC732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B74EB89626BEC75E00FFC732;
+			remoteInfo = "TaiwanpetadoptionApp-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-ios.release.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios.release.xcconfig"; sourceTree = "<group>"; };
+		48EE440318F26BDA7D1634AF /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		55F2D1E383BCACCBDB138349 /* Pods_TaiwanpetadoptionApp_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanpetadoptionApp_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanpetadoptionApp_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50AED3E2C3CE5E206524C59 /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AFEF760704ECCE67A4455EDF /* Pods-TaiwanpetadoptionApp-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-ios.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		B635109B42AB236F0B4C3D4D /* Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		B74EB89726BEC75E00FFC732 /* TaiwanpetadoptionApp-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TaiwanpetadoptionApp-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B74EB89C26BEC75E00FFC732 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B74EB89E26BEC75E00FFC732 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B74EB8A126BEC75E00FFC732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B74EB8A326BEC75F00FFC732 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B74EB8A626BEC75F00FFC732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B74EB8A826BEC75F00FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74EB8AD26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TaiwanpetadoptionApp-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B74EB8B126BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_iosTests.swift; sourceTree = "<group>"; };
+		B74EB8B326BEC75F00FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74EB8B826BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TaiwanpetadoptionApp-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_iosUITests.swift; sourceTree = "<group>"; };
+		B74EB8BE26BEC76000FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B74EB8CA26BEC97100FFC732 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B74EB89426BEC75E00FFC732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74EB8AA26BEC75F00FFC732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A0FA8EF4EE3AC219F12913F /* Pods_TaiwanpetadoptionApp_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74EB8B526BEC76000FFC732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C567CCFC731BA83EEA8C911C /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AEB4048EDBB3F60B0743953A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */,
+				4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */,
+				55F2D1E383BCACCBDB138349 /* Pods_TaiwanpetadoptionApp_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B74EB88E26BEC75E00FFC732 = {
+			isa = PBXGroup;
+			children = (
+				B74EB8CA26BEC97100FFC732 /* .gitignore */,
+				B74EB89926BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */,
+				B74EB8B026BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests */,
+				B74EB8BB26BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests */,
+				B74EB89826BEC75E00FFC732 /* Products */,
+				BE67B546B2905080089ADB54 /* Pods */,
+				AEB4048EDBB3F60B0743953A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B74EB89826BEC75E00FFC732 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B74EB89726BEC75E00FFC732 /* TaiwanpetadoptionApp-ios.app */,
+				B74EB8AD26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests.xctest */,
+				B74EB8B826BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B74EB89926BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */ = {
+			isa = PBXGroup;
+			children = (
+				B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */,
+				B74EB89C26BEC75E00FFC732 /* SceneDelegate.swift */,
+				B74EB89E26BEC75E00FFC732 /* ViewController.swift */,
+				B74EB8A026BEC75E00FFC732 /* Main.storyboard */,
+				B74EB8A326BEC75F00FFC732 /* Assets.xcassets */,
+				B74EB8A526BEC75F00FFC732 /* LaunchScreen.storyboard */,
+				B74EB8A826BEC75F00FFC732 /* Info.plist */,
+			);
+			path = "TaiwanpetadoptionApp-ios";
+			sourceTree = "<group>";
+		};
+		B74EB8B026BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				B74EB8B126BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift */,
+				B74EB8B326BEC75F00FFC732 /* Info.plist */,
+			);
+			path = "TaiwanpetadoptionApp-iosTests";
+			sourceTree = "<group>";
+		};
+		B74EB8BB26BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */,
+				B74EB8BE26BEC76000FFC732 /* Info.plist */,
+			);
+			path = "TaiwanpetadoptionApp-iosUITests";
+			sourceTree = "<group>";
+		};
+		BE67B546B2905080089ADB54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFEF760704ECCE67A4455EDF /* Pods-TaiwanpetadoptionApp-ios.debug.xcconfig */,
+				47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */,
+				48EE440318F26BDA7D1634AF /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.debug.xcconfig */,
+				A50AED3E2C3CE5E206524C59 /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.release.xcconfig */,
+				31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */,
+				B635109B42AB236F0B4C3D4D /* Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B74EB8C126BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-ios" */;
+			buildPhases = (
+				B20D9D49294549DBE4B2C8C8 /* [CP] Check Pods Manifest.lock */,
+				B74EB89326BEC75E00FFC732 /* Sources */,
+				B74EB89426BEC75E00FFC732 /* Frameworks */,
+				B74EB89526BEC75E00FFC732 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TaiwanpetadoptionApp-ios";
+			productName = "TaiwanpetadoptionApp-ios";
+			productReference = B74EB89726BEC75E00FFC732 /* TaiwanpetadoptionApp-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B74EB8AC26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B74EB8C426BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-iosTests" */;
+			buildPhases = (
+				55E7B437E8DEA0FA4C3DA2D0 /* [CP] Check Pods Manifest.lock */,
+				B74EB8A926BEC75F00FFC732 /* Sources */,
+				B74EB8AA26BEC75F00FFC732 /* Frameworks */,
+				B74EB8AB26BEC75F00FFC732 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B74EB8AF26BEC75F00FFC732 /* PBXTargetDependency */,
+			);
+			name = "TaiwanpetadoptionApp-iosTests";
+			productName = "TaiwanpetadoptionApp-iosTests";
+			productReference = B74EB8AD26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B74EB8B726BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B74EB8C726BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-iosUITests" */;
+			buildPhases = (
+				10357613A4C8CD6E3FE0E882 /* [CP] Check Pods Manifest.lock */,
+				B74EB8B426BEC76000FFC732 /* Sources */,
+				B74EB8B526BEC76000FFC732 /* Frameworks */,
+				B74EB8B626BEC76000FFC732 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B74EB8BA26BEC76000FFC732 /* PBXTargetDependency */,
+			);
+			name = "TaiwanpetadoptionApp-iosUITests";
+			productName = "TaiwanpetadoptionApp-iosUITests";
+			productReference = B74EB8B826BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B74EB88F26BEC75E00FFC732 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					B74EB89626BEC75E00FFC732 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					B74EB8AC26BEC75F00FFC732 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B74EB89626BEC75E00FFC732;
+					};
+					B74EB8B726BEC76000FFC732 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B74EB89626BEC75E00FFC732;
+					};
+				};
+			};
+			buildConfigurationList = B74EB89226BEC75E00FFC732 /* Build configuration list for PBXProject "TaiwanpetadoptionApp-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B74EB88E26BEC75E00FFC732;
+			productRefGroup = B74EB89826BEC75E00FFC732 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */,
+				B74EB8AC26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests */,
+				B74EB8B726BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B74EB89526BEC75E00FFC732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */,
+				B74EB8A726BEC75F00FFC732 /* LaunchScreen.storyboard in Resources */,
+				B74EB8A426BEC75F00FFC732 /* Assets.xcassets in Resources */,
+				B74EB8A226BEC75E00FFC732 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74EB8AB26BEC75F00FFC732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74EB8B626BEC76000FFC732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10357613A4C8CD6E3FE0E882 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55E7B437E8DEA0FA4C3DA2D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiwanpetadoptionApp-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B20D9D49294549DBE4B2C8C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TaiwanpetadoptionApp-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B74EB89326BEC75E00FFC732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
+				B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */,
+				B74EB89D26BEC75E00FFC732 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74EB8A926BEC75F00FFC732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74EB8B226BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B74EB8B426BEC76000FFC732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B74EB8BD26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B74EB8AF26BEC75F00FFC732 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */;
+			targetProxy = B74EB8AE26BEC75F00FFC732 /* PBXContainerItemProxy */;
+		};
+		B74EB8BA26BEC76000FFC732 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */;
+			targetProxy = B74EB8B926BEC76000FFC732 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B74EB8A026BEC75E00FFC732 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B74EB8A126BEC75E00FFC732 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B74EB8A526BEC75F00FFC732 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B74EB8A626BEC75F00FFC732 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B74EB8BF26BEC76000FFC732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B74EB8C026BEC76000FFC732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B74EB8C226BEC76000FFC732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFEF760704ECCE67A4455EDF /* Pods-TaiwanpetadoptionApp-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = "TaiwanpetadoptionApp-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B74EB8C326BEC76000FFC732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = "TaiwanpetadoptionApp-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B74EB8C526BEC76000FFC732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = "TaiwanpetadoptionApp-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiwanpetadoptionApp-ios.app/TaiwanpetadoptionApp-ios";
+			};
+			name = Debug;
+		};
+		B74EB8C626BEC76000FFC732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B635109B42AB236F0B4C3D4D /* Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = "TaiwanpetadoptionApp-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiwanpetadoptionApp-ios.app/TaiwanpetadoptionApp-ios";
+			};
+			name = Release;
+		};
+		B74EB8C826BEC76000FFC732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48EE440318F26BDA7D1634AF /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = "TaiwanpetadoptionApp-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TaiwanpetadoptionApp-ios";
+			};
+			name = Debug;
+		};
+		B74EB8C926BEC76000FFC732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A50AED3E2C3CE5E206524C59 /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = "TaiwanpetadoptionApp-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TaiwanpetadoptionApp-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B74EB89226BEC75E00FFC732 /* Build configuration list for PBXProject "TaiwanpetadoptionApp-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74EB8BF26BEC76000FFC732 /* Debug */,
+				B74EB8C026BEC76000FFC732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B74EB8C126BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74EB8C226BEC76000FFC732 /* Debug */,
+				B74EB8C326BEC76000FFC732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B74EB8C426BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74EB8C526BEC76000FFC732 /* Debug */,
+				B74EB8C626BEC76000FFC732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B74EB8C726BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B74EB8C826BEC76000FFC732 /* Debug */,
+				B74EB8C926BEC76000FFC732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B74EB88F26BEC75E00FFC732 /* Project object */;
+}
