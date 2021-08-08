@@ -19,11 +19,13 @@ class ViewController: UIViewController {
 
     
     func getData(){
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseJSON { response in
-            print("Response:")
+        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { (response) in
+            guard let Data = response.value else { return }
+            Data.forEach { Data in
+                print(Data.animal_place)
 
-            print("Response: \(response)")
-        }
+            }
+          }
     }
 }
 

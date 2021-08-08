@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		B74EB8BD26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */; };
 		B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CA26BEC97100FFC732 /* .gitignore */; };
 		B74EB8CD26BED10F00FFC732 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */; };
+		B7E52D1226C00212000BFCEA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E52D1126C00212000BFCEA /* Data.swift */; };
 		C567CCFC731BA83EEA8C911C /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		B74EB8BE26BEC76000FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74EB8CA26BEC97100FFC732 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7E52D1126C00212000BFCEA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				B74EB8A326BEC75F00FFC732 /* Assets.xcassets */,
 				B74EB8A526BEC75F00FFC732 /* LaunchScreen.storyboard */,
 				B74EB8A826BEC75F00FFC732 /* Info.plist */,
+				B7E52D1126C00212000BFCEA /* Data.swift */,
 			);
 			path = "TaiwanpetadoptionApp-ios";
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
+				B7E52D1226C00212000BFCEA /* Data.swift in Sources */,
 				B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
