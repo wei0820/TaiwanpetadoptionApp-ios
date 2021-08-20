@@ -10,6 +10,7 @@ import Alamofire
 import AppTrackingTransparency
 import AdSupport
 import GoogleMobileAds
+import JGProgressHUD
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
 //    func onVpadnAdLoaded(_ banner: VpadnBanner) {
@@ -79,7 +80,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            setAdBanner()
 //        })
         setAdBanner()
-
+            
         getData()
         
     }
@@ -123,6 +124,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //
     
     func getData(){
+        let hud = JGProgressHUD()
+
         AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
             response.value?.forEach({ Data in
 //                print("test",Data)
@@ -132,7 +135,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
             })
 
-          }
+        }.downloadProgress { progress in
+            print("Download Progress: \(progress.fractionCompleted * 100)")
+            hud.setProgress(Float(progress.fractionCompleted), animated: true)
+            hud.shadow = JGProgressHUDShadow(color: .black, offset: .zero, radius: 5.0, opacity: 0.2)
+            hud.textLabel.text = "下載中"
+            hud.detailTextLabel.text = String(format: "%.0f",(progress.fractionCompleted * 100)) + "%"
+            hud.show(in: self.view)
+            if(Float(progress.fractionCompleted) == 1.0){
+                hud.dismiss()
+
+            }
+            
+        }
         
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -141,6 +156,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     
     }
+
     
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("bannerViewDidReceiveAd")
