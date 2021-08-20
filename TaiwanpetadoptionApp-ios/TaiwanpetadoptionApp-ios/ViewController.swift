@@ -136,7 +136,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             })
 
         }.downloadProgress { progress in
-            print("Download Progress: \(progress.fractionCompleted * 100)")
             hud.setProgress(Float(progress.fractionCompleted), animated: true)
             hud.shadow = JGProgressHUDShadow(color: .black, offset: .zero, radius: 5.0, opacity: 0.2)
             hud.textLabel.text = "下載中"
