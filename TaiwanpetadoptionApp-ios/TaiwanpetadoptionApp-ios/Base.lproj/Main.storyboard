@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-Jf-AdX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="638"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dataCell" rowHeight="140" id="Ed7-tP-i2c" customClass="DataTableViewCell" customModule="TaiwanpetadoptionApp_ios" customModuleProvider="target">
@@ -82,35 +82,61 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gv-qi-s6Y">
-                                <rect key="frame" x="0.0" y="646" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="736" width="414" height="0.0"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="3dc-Jf-AdX" secondAttribute="bottom" constant="98" id="1NK-VN-y6H"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-98" id="3J7-19-ZIq"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DA8-te-svy"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BlA-Dc-Vwh"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M0I-sl-hlF"/>
                             <constraint firstItem="9gv-qi-s6Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OQC-3d-Bpf"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OlM-Hn-jQ6"/>
                             <constraint firstItem="9gv-qi-s6Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OzS-kf-WOF"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RTo-Sx-O9B"/>
-                            <constraint firstItem="9gv-qi-s6Y" firstAttribute="top" secondItem="3dc-Jf-AdX" secondAttribute="bottom" constant="8" id="W0d-Mp-98N"/>
+                            <constraint firstItem="9gv-qi-s6Y" firstAttribute="top" secondItem="3dc-Jf-AdX" secondAttribute="bottom" id="Wow-cW-aK6"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aXW-Vu-MtR"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUj-z0-ewJ"/>
                             <constraint firstItem="9gv-qi-s6Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eex-H3-Zhb"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ijs-ZY-yuJ"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kWV-dQ-tuu"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oqS-6X-VND"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oAb-VV-cDU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bannerVIew" destination="9gv-qi-s6Y" id="IEz-dW-9Ma"/>
                         <outlet property="tableView" destination="3dc-Jf-AdX" id="Oi9-aK-chj"/>
+                        <segue destination="W5Z-Sr-PL1" kind="show" identifier="detail" id="SYi-ds-BZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="94.565217391304358"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="EV9-8S-Hnu">
+            <objects>
+                <viewController id="W5Z-Sr-PL1" customClass="DetailViewController" customModule="TaiwanpetadoptionApp_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F9G-b3-1Na">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2m-AI-s5A">
+                                <rect key="frame" x="134" y="28" width="130" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Mf-UP-fmu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Kn-1i-1xo"/>
+                    <connections>
+                        <outlet property="animal_kind" destination="h2m-AI-s5A" id="bfs-OS-7T0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g27-h4-2YM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="94.565217391304358"/>
         </scene>
     </scenes>
     <resources>

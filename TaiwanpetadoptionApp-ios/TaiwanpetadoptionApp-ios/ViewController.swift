@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var bannerVIew: UIView!
 //    var vpadnBanner: VpadnBanner!
-
+    var myIndex : IndexPath = IndexPath()
     var arrayData :[Data] = [Data]()
     
     struct CellIdentifier {
@@ -103,23 +103,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             adBannerView!.delegate = self
             adBannerView!.rootViewController = self
             adBannerView!.load(GADRequest())
-//        vpadnBanner = VpadnBanner.init(licenseKey: "8a80854b6a47fb18016a6ccd89e26240", adSize: VpadnAdSizeSmartBannerPortrait)
-//        vpadnBanner.delegate = self
-//        vpadnBanner.load(initialRequest())
-//        }
-//
-//    func initialRequest() -> VpadnAdRequest {
-//        let request = VpadnAdRequest.init()
-////        request.setTestDevices([ASIdentifierManager.shared().advertisingIdentifier.uuidString])     //取得測試廣告
-//            request.setAutoRefresh(true)                                                                //僅限於 Banner
-////        request.setUserInfoGender(.genderMale)                                                      //性別
-////        request.setUserInfoBirthdayWithYear(2000, month: 08, andDay: 17)                            //生日
-////        request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
-////        request.setTagForUnderAgeOfConsent(.false)                                                  //是否專為特定年齡投放
-////        request.setTagForChildDirectedTreatment(.false)                                             //是否專為兒童投放
-////        request.setContentUrl("https://www.google.com.tw/")                                         //內容
-////        request.setContentData(["key1": 1, "key2": true, "key3": "name", "key4": 123.31])           //內容鍵值
-//        return request
     }
 //
     
@@ -149,14 +132,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        let name = arrayData[indexPath.row].animal_age
-        
-    
-    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          tableView.deselectRow(
+              at: indexPath, animated: true)
+        myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
+        self.performSegue(withIdentifier: "detail", sender: nil)
 
-    
+
+      }
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       if segue.identifier == "detail"{
+           if let index = tableView.indexPathForSelectedRow{
+               let secondCV = segue.destination as! DetailViewController
+            secondCV.kind = arrayData[index.row].animal_kind
+               
+           }
+           
+           
+       }
+       
+   }
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("bannerViewDidReceiveAd")
     }
