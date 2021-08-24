@@ -86,14 +86,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    
     @objc func loadData(){
+ 
 //
         AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
             
             print("test",response.value?.count)
             if(response.value != nil && response.value!.count >= 0){
                 arrayData.removeAll()
+
                 print("tsest",arrayData.count)
 
                 response.value?.forEach({ Data in
@@ -111,6 +112,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }.downloadProgress { progress in
             
             if(Float(progress.fractionCompleted) == 1.0){
+                self.tableView.reloadData()
                 self.refreshControl.endRefreshing()
 
             }

@@ -191,6 +191,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dp-M6-lRq">
+                                <rect key="frame" x="20" y="543.33333333333337" width="374" height="30"/>
+                                <state key="normal" title="分享給親朋好友"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="W5Z-Sr-PL1" eventType="touchUpInside" id="cy5-hs-IM9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Mf-UP-fmu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -216,6 +223,8 @@
                             <constraint firstItem="Xhk-Gw-nWq" firstAttribute="leading" secondItem="4Mf-UP-fmu" secondAttribute="leading" constant="20" id="SFn-k4-b2t"/>
                             <constraint firstItem="zt2-ZC-kWo" firstAttribute="leading" secondItem="4Mf-UP-fmu" secondAttribute="leading" constant="20" id="UiG-wh-11Q"/>
                             <constraint firstItem="q0u-mM-VNa" firstAttribute="leading" secondItem="4Mf-UP-fmu" secondAttribute="leading" constant="20" id="aJf-PU-iez"/>
+                            <constraint firstItem="4dp-M6-lRq" firstAttribute="leading" secondItem="4Mf-UP-fmu" secondAttribute="leading" constant="20" id="aZ7-i0-pwx"/>
+                            <constraint firstItem="4Mf-UP-fmu" firstAttribute="trailing" secondItem="4dp-M6-lRq" secondAttribute="trailing" constant="20" id="afp-jo-OYW"/>
                             <constraint firstItem="CSZ-E0-rI4" firstAttribute="top" secondItem="4Mf-UP-fmu" secondAttribute="top" constant="20" id="bc4-j8-5av"/>
                             <constraint firstItem="4Mf-UP-fmu" firstAttribute="trailing" secondItem="v4d-9L-1ao" secondAttribute="trailing" constant="20" id="fYf-Mb-a6O"/>
                             <constraint firstItem="2qv-D5-gt3" firstAttribute="leading" secondItem="4Mf-UP-fmu" secondAttribute="leading" constant="20" id="hxa-4R-lzX"/>
@@ -229,6 +238,7 @@
                             <constraint firstItem="1hs-a5-Boh" firstAttribute="top" secondItem="Xhk-Gw-nWq" secondAttribute="bottom" constant="8" id="tmD-PO-OlJ"/>
                             <constraint firstItem="v4d-9L-1ao" firstAttribute="top" secondItem="q0u-mM-VNa" secondAttribute="bottom" constant="8" id="uOY-ci-rRq"/>
                             <constraint firstItem="kaL-C4-L2q" firstAttribute="top" secondItem="CpF-by-5F9" secondAttribute="bottom" constant="8" id="uPj-8N-Y1i"/>
+                            <constraint firstItem="4dp-M6-lRq" firstAttribute="top" secondItem="vWU-CZ-t1p" secondAttribute="bottom" constant="8" id="ua2-9B-WW5"/>
                             <constraint firstItem="eqq-MJ-wLj" firstAttribute="top" secondItem="kaL-C4-L2q" secondAttribute="bottom" constant="8" id="xOC-Xb-WgU"/>
                             <constraint firstItem="2qv-D5-gt3" firstAttribute="top" secondItem="1hs-a5-Boh" secondAttribute="bottom" constant="8" id="yot-ni-lIF"/>
                         </constraints>
@@ -245,6 +255,7 @@
                         <outlet property="imageView" destination="CSZ-E0-rI4" id="g6H-iu-Ssb"/>
                         <outlet property="nameLabel" destination="1hs-a5-Boh" id="oEE-cV-fex"/>
                         <outlet property="sexLabel" destination="CpF-by-5F9" id="QcU-K8-XvT"/>
+                        <outlet property="shareView" destination="F9G-b3-1Na" id="JaT-hD-O0g"/>
                         <outlet property="sterilizationLabel" destination="q0u-mM-VNa" id="LJj-mm-ojS"/>
                         <outlet property="telLabel" destination="vWU-CZ-t1p" id="8hM-HV-63p"/>
                     </connections>

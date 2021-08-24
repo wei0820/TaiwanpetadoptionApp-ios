@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0411A25326C2619B0072987E /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411A25226C2619B0072987E /* DataTableViewCell.swift */; };
 		048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0D26CF97C700250B01 /* DetailViewController.swift */; };
+		048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */; };
 		23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */; };
 		3A0FA8EF4EE3AC219F12913F /* Pods_TaiwanpetadoptionApp_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2D1E383BCACCBDB138349 /* Pods_TaiwanpetadoptionApp_iosTests.framework */; };
 		B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		0411A25226C2619B0072987E /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
 		048C1B0D26CF97C700250B01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataManager.swift; sourceTree = "<group>"; };
 		31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-ios.release.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				B7E52D1126C00212000BFCEA /* Data.swift */,
 				0411A25226C2619B0072987E /* DataTableViewCell.swift */,
 				048C1B0D26CF97C700250B01 /* DetailViewController.swift */,
+				048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */,
 			);
 			path = "TaiwanpetadoptionApp-ios";
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */,
 				B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */,
 				0411A25326C2619B0072987E /* DataTableViewCell.swift in Sources */,
+				048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,6 +37,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var foundplaceLabel: UILabel!
     @IBOutlet weak var bacterinLabel: UILabel!
     
+    @IBOutlet var shareView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,5 +87,18 @@ class DetailViewController: UIViewController {
            }
         }
         task.resume()
+    }
+    
+    func share(){
+           let renderer = UIGraphicsImageRenderer(size: shareView.bounds.size)
+           let image = renderer.image(actions: { (context) in
+              shareView.drawHierarchy(in: shareView.bounds, afterScreenUpdates: true)
+        })
+           let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+           present(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func shareAction(_ sender: Any) {
+        share()
     }
 }
