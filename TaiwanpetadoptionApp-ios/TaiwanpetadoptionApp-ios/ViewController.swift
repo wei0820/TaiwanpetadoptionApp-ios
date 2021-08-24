@@ -13,11 +13,8 @@ import GoogleMobileAds
 import JGProgressHUD
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
-//    func onVpadnAdLoaded(_ banner: VpadnBanner) {
-//
-//        self.bannerVIew.addSubview(banner.getVpadnAdView())
-//    }
-    
+    var refreshControl:UIRefreshControl!
+
     @IBOutlet weak var bannerVIew: UIView!
 //    var vpadnBanner: VpadnBanner!
     var myIndex : IndexPath = IndexPath()
@@ -75,14 +72,52 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
              }
         tableView.dataSource = self
         tableView.delegate = self
-//        ATTrackingManager.requestTrackingAuthorization(completionHandler: { [self] status in
-//          // Tracking authorization completed. Start loading ads here.
-//            setAdBanner()
-//        })
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "refresh...")
+               
+        refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+
+
         setAdBanner()
             
         getData()
         
+    }
+    
+    
+    @objc func loadData(){
+//
+        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
+            
+            print("test",response.value?.count)
+            if(response.value != nil && response.value!.count >= 0){
+                arrayData.removeAll()
+                print("tsest",arrayData.count)
+
+                response.value?.forEach({ Data in
+                    if(Data != nil){
+                        arrayData.append(Data)
+                        print("test",arrayData.count)
+                        print("test",Data.animal_kind)
+
+                    }
+
+                })
+            }
+  
+
+        }.downloadProgress { progress in
+            
+            if(Float(progress.fractionCompleted) == 1.0){
+                self.refreshControl.endRefreshing()
+
+            }
+            
+        }
+
+
     }
     func loadUrl(url :String,imageView : UIImageView){
         let url = URL(string: url)!
@@ -111,8 +146,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
         AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
             response.value?.forEach({ Data in
-//                print("test",Data)
-//                print("test",Data.animal_age)
                 arrayData.append(Data)
                 tableView.reloadData()
 

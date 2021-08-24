@@ -48,7 +48,7 @@ class DetailViewController: UIViewController {
         ageLabel.text = "年紀:" + animal_age!
         sterilizationLabel.text = "是否絕育:" + animal_sterilization!
         bacterinLabel.text = "是否施打狂犬病疫苗:" + animal_bacterin!
-        nameLabel.text = "收容所名稱:" + shelter_name!
+        nameLabel.text = "收容所名稱:" + shelter_name! 
         foundplaceLabel.text = "尋獲地:" + animal_foundplace!
         addressLabel.text =  "地址:" + shelter_address!
         telLabel.text = "聯絡電話:" + shelter_tel!
