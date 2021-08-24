@@ -74,7 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.delegate = self
         
         refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "refresh...")
+        refreshControl.attributedTitle = NSAttributedString(string: "更新中...")
                
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)

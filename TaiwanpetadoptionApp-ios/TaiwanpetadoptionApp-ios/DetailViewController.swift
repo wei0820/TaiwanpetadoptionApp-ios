@@ -40,6 +40,13 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if #available(iOS 13.0, *) {
+                 overrideUserInterfaceStyle = .light
+             } else {
+                 // Fallback on earlier versions
+             }
         loadUrl(url: album_file!, imageView: imageView)
         animal_kind.text = "種類:" + animalkind!
         sexLabel.text = "性別:"  + animal_sex!
