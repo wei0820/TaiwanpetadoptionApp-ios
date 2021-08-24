@@ -133,25 +133,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-          tableView.deselectRow(
-              at: indexPath, animated: true)
+//          tableView.deselectRow(
+//              at: indexPath, animated: true)
         myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
-        self.performSegue(withIdentifier: "detail", sender: nil)
+        performSegue(withIdentifier: "detailcv", sender: nil)
 
 
       }
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       if segue.identifier == "detail"{
-           if let index = tableView.indexPathForSelectedRow{
-               let secondCV = segue.destination as! DetailViewController
-            secondCV.kind = arrayData[index.row].animal_kind
-               
-           }
-           
-           
-       }
-       
+
+        let controller = segue.destination as? DetailViewController
+        let indexPath = tableView.indexPathForSelectedRow
+    controller?.animalkind = arrayData[indexPath!.row].animal_kind
+    controller?.album_file = arrayData[indexPath!.row].album_file
+    controller?.animal_sex = arrayData[indexPath!.row].animal_sex
+    controller?.animal_bodytype = arrayData[indexPath!.row].animal_bodytype
+    controller?.animal_colour = arrayData[indexPath!.row].animal_colour
+    controller?.animal_age = arrayData[indexPath!.row].animal_age
+    controller?.animal_sterilization = arrayData[indexPath!.row].animal_sterilization
+    controller?.animal_bacterin = arrayData[indexPath!.row].animal_bacterin
+    controller?.animal_foundplace = arrayData[indexPath!.row].animal_foundplace
+    controller?.shelter_name = arrayData[indexPath!.row].shelter_name
+    controller?.shelter_address = arrayData[indexPath!.row].shelter_address
+    controller?.shelter_tel = arrayData[indexPath!.row].shelter_tel
+    
+
    }
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("bannerViewDidReceiveAd")
