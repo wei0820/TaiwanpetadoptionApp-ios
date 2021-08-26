@@ -17,8 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3dc-Jf-AdX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="673" id="ksI-AW-ytV"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dataCell" rowHeight="140" id="Ed7-tP-i2c" customClass="DataTableViewCell" customModule="TaiwanpetadoptionApp_ios" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="140"/>
@@ -82,22 +85,20 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gv-qi-s6Y">
-                                <rect key="frame" x="0.0" y="736" width="414" height="0.0"/>
+                                <rect key="frame" x="0.0" y="723" width="414" height="13"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BlA-Dc-Vwh"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="M0I-sl-hlF"/>
                             <constraint firstItem="9gv-qi-s6Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OQC-3d-Bpf"/>
                             <constraint firstItem="9gv-qi-s6Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OzS-kf-WOF"/>
-                            <constraint firstItem="9gv-qi-s6Y" firstAttribute="top" secondItem="3dc-Jf-AdX" secondAttribute="bottom" id="Wow-cW-aK6"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aXW-Vu-MtR"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cUj-z0-ewJ"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a0t-Zv-7fd"/>
+                            <constraint firstItem="9gv-qi-s6Y" firstAttribute="top" secondItem="3dc-Jf-AdX" secondAttribute="bottom" constant="50" id="aPa-5J-giM"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bri-zh-61z"/>
                             <constraint firstItem="9gv-qi-s6Y" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="eex-H3-Zhb"/>
-                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oAb-VV-cDU"/>
+                            <constraint firstItem="3dc-Jf-AdX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jcl-CH-rX5"/>
                         </constraints>
                     </view>
                     <connections>

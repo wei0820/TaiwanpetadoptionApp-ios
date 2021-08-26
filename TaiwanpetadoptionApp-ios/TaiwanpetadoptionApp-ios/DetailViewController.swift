@@ -78,6 +78,10 @@ class DetailViewController: UIViewController {
     }
     */
     func loadUrl(url :String,imageView : UIImageView){
+        if(url.isEmpty){
+            imageView.image = UIImage(named: "iconerror")
+            return
+        }
         let url = URL(string: url)!
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
            if let data = data, let image = UIImage(data: data) {

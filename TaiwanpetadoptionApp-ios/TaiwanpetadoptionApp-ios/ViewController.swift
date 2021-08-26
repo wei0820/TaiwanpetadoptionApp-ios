@@ -65,6 +65,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getData()
+
         if #available(iOS 13.0, *) {
                  overrideUserInterfaceStyle = .light
              } else {
@@ -79,10 +82,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
 
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                //you got permission to track
+                self.setAdBanner()
+                
 
-        setAdBanner()
+            })
+        } else {
+            //you got permission to track, iOS 14 is not yet installed
+        }
             
-        getData()
         
     }
     
@@ -91,17 +101,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //
         AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
             
-            print("test",response.value?.count)
             if(response.value != nil && response.value!.count >= 0){
                 arrayData.removeAll()
-
-                print("tsest",arrayData.count)
-
                 response.value?.forEach({ Data in
                     if(Data != nil){
                         arrayData.append(Data)
-                        print("test",arrayData.count)
-                        print("test",Data.animal_kind)
+                
 
                     }
 
@@ -220,7 +225,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func addBannerViewToView(_ bannerView: GADBannerView) {
-            bannerView.translatesAutoresizingMaskIntoConstraints = false
+            bannerView.translatesAutoresizingMaskIntoConstraints = true
             view.addSubview(bannerView)
             view.addConstraints(
                 [NSLayoutConstraint(item: bannerView,
