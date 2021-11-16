@@ -18,6 +18,7 @@
 		0451F01627425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F01527425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift */; };
 		0451F01A27425F4B00019B20 /* TaiwanpetadoptionApp.Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0451F02527426B4E00019B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A326BEC75F00FFC732 /* Assets.xcassets */; };
+		0451F027274359B800019B20 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F026274359B800019B20 /* ShareViewController.swift */; };
 		048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0D26CF97C700250B01 /* DetailViewController.swift */; };
 		048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */; };
 		23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */; };
@@ -104,6 +105,7 @@
 		0451F01127425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiwanpetadoptionApp.ClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0451F01527425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_ClipUITests.swift; sourceTree = "<group>"; };
 		0451F01727425F4B00019B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0451F026274359B800019B20 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		048C1B0D26CF97C700250B01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataManager.swift; sourceTree = "<group>"; };
 		31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				0411A25226C2619B0072987E /* DataTableViewCell.swift */,
 				048C1B0D26CF97C700250B01 /* DetailViewController.swift */,
 				048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */,
+				0451F026274359B800019B20 /* ShareViewController.swift */,
 			);
 			path = "TaiwanpetadoptionApp-ios";
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0451F027274359B800019B20 /* ShareViewController.swift in Sources */,
 				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
 				B7E52D1226C00212000BFCEA /* Data.swift in Sources */,
 				048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */,
