@@ -17,7 +17,7 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
     
     
     var myIndex : IndexPath = IndexPath()
-    var arrayData :[Data] = [Data]()
+    var arrayData :[PetData] = [PetData]()
     @IBOutlet weak var tableView: UITableView!
     struct CellIdentifier {
         static let identifier = "dataCell"
@@ -66,6 +66,8 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
          let actionButton = JJFloatingActionButton()
          
          actionButton.addItem(title: "新增", image: UIImage(named: "create")?.withRenderingMode(.alwaysTemplate)) { item in
+            
+            self.setJump(type: "adddate")
          }
          
          
@@ -94,5 +96,12 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
      }
      
     
-
+    func setJump(type:String){
+         
+         if let controller = storyboard?.instantiateViewController(withIdentifier: type) {
+                    present(controller, animated: true, completion: nil)
+                }
+         
+     }
+        
 }

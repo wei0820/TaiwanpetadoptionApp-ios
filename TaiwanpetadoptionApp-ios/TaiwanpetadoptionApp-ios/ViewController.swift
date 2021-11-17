@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var bannerVIew: UIView!
 //    var vpadnBanner: VpadnBanner!
     var myIndex : IndexPath = IndexPath()
-    var arrayData :[Data] = [Data]()
+    var arrayData :[PetData] = [PetData]()
     
     struct CellIdentifier {
         static let identifier = "dataCell"
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @objc func loadData(){
  
 //
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
+        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
             
             if(response.value != nil && response.value!.count >= 0){
                 arrayData.removeAll()
@@ -151,7 +151,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func getData(){
         let hud = JGProgressHUD()
 
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
+        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
             response.value?.forEach({ Data in
                 arrayData.append(Data)
                 tableView.reloadData()

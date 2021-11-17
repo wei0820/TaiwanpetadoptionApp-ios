@@ -34,6 +34,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-9f-2QY">
                                                         <rect key="frame" x="141.33333333333337" y="0.0" width="34" height="30"/>
                                                         <state key="normal" title="進入"/>
+                                                        <connections>
+                                                            <segue destination="xXX-Em-yO2" kind="showDetail" id="2aG-dV-zxA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -584,7 +587,7 @@
         <!--Add Date View Controller-->
         <scene sceneID="9DH-9J-EJe">
             <objects>
-                <viewController storyboardIdentifier="adddate" id="Uqz-qZ-2K2" customClass="AddDateViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="adddate" id="Uqz-qZ-2K2" customClass="AddDateViewController" customModule="TaiwanpetadoptionApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yzC-Ek-KS0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -651,7 +654,7 @@
                                 </constraints>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" verticalCompressionResistancePriority="757" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="bvK-Q1-DDK">
-                                <rect key="frame" x="16" y="318" width="382" height="194.33333333333337"/>
+                                <rect key="frame" x="16" y="318" width="382" height="196.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="E5f-Ol-lQ5">
                                         <rect key="frame" x="16" y="0.0" width="350" height="20.333333333333332"/>
@@ -672,34 +675,30 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-T5-KEo">
-                                        <rect key="frame" x="16" y="76.333333333333314" width="350" height="32"/>
+                                        <rect key="frame" x="16" y="76.333333333333314" width="350" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="目前評分:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-bm-rym">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="32"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="寵物種類:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-bm-rym">
+                                                <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIl-T0-7pY">
-                                                <rect key="frame" x="74" y="0.0" width="182" height="32"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="255" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="CxV-Qe-WxM">
-                                                <rect key="frame" x="256" y="0.0" width="94" height="32"/>
-                                            </stepper>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akd-Jh-qQ4">
+                                                <rect key="frame" x="74" y="0.0" width="276" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSh-2r-ePk">
-                                        <rect key="frame" x="160" y="121.33333333333331" width="62" height="30"/>
+                                        <rect key="frame" x="160" y="123.33333333333331" width="62" height="30"/>
                                         <state key="normal" title="發表文章"/>
                                         <connections>
                                             <action selector="sendButton:" destination="Uqz-qZ-2K2" eventType="touchUpInside" id="APG-XD-Rgj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qce-yj-axQ">
-                                        <rect key="frame" x="129.66666666666666" y="164.33333333333331" width="123" height="30"/>
+                                        <rect key="frame" x="129.66666666666666" y="166.33333333333331" width="123" height="30"/>
                                         <state key="normal" title="先不用！我再想想"/>
                                         <connections>
                                             <action selector="dissViewButton:" destination="Uqz-qZ-2K2" eventType="touchUpInside" id="k7I-rn-lJA"/>
@@ -739,10 +738,9 @@
                         <outlet property="addTF" destination="JLM-1M-ms4" id="VMG-Ia-yov"/>
                         <outlet property="detailTF" destination="xQl-hg-DV4" id="2ur-Qq-dqg"/>
                         <outlet property="imageName_1" destination="Bjp-6O-pJw" id="p2m-fT-wyB"/>
+                        <outlet property="kindTF" destination="akd-Jh-qQ4" id="FlJ-zG-HkY"/>
                         <outlet property="nameTF" destination="FDi-Nr-laf" id="aiJ-ba-wuJ"/>
                         <outlet property="pickerView" destination="S9z-1m-T0v" id="r8z-XP-Ne4"/>
-                        <outlet property="scoreStepper" destination="CxV-Qe-WxM" id="Epj-HE-vEZ"/>
-                        <outlet property="scoreTF" destination="eIl-T0-7pY" id="QFg-cQ-n5K"/>
                         <outlet property="uploadImagButton" destination="ZBh-Fn-kCs" id="VpL-x6-LeE"/>
                     </connections>
                 </viewController>
@@ -750,8 +748,54 @@
             </objects>
             <point key="canvasLocation" x="1176.056338028169" y="-460.76134699853583"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="v9h-yu-gYL">
+            <objects>
+                <viewController storyboardIdentifier="login" id="xXX-Em-yO2" customClass="LoginViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FEY-gP-cnp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSU-hu-1WD">
+                                <rect key="frame" x="80" y="590" width="250" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Bwu-Ux-TZn"/>
+                                    <constraint firstAttribute="width" constant="250" id="eIR-Oi-Qno"/>
+                                </constraints>
+                                <state key="normal" image="applesign"/>
+                                <connections>
+                                    <action selector="appleIdLoginAction:" destination="xXX-Em-yO2" eventType="touchUpInside" id="Woc-Fn-dv0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V5S-0x-Fhe">
+                                <rect key="frame" x="55" y="654" width="304" height="30"/>
+                                <state key="normal" title="訪客登入"/>
+                                <connections>
+                                    <action selector="guestAction:" destination="xXX-Em-yO2" eventType="touchUpInside" id="W2b-wo-WvT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Krw-gi-WBe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="V5S-0x-Fhe" firstAttribute="leading" secondItem="Krw-gi-WBe" secondAttribute="leading" constant="55" id="08k-6I-tCa"/>
+                            <constraint firstItem="V5S-0x-Fhe" firstAttribute="top" secondItem="aSU-hu-1WD" secondAttribute="bottom" constant="20" id="8t1-KR-XdH"/>
+                            <constraint firstItem="aSU-hu-1WD" firstAttribute="centerX" secondItem="FEY-gP-cnp" secondAttribute="centerX" constant="-2" id="Cw0-jB-ah4"/>
+                            <constraint firstItem="Krw-gi-WBe" firstAttribute="trailing" secondItem="V5S-0x-Fhe" secondAttribute="trailing" constant="55" id="IP5-Ae-T86"/>
+                            <constraint firstItem="aSU-hu-1WD" firstAttribute="centerY" secondItem="FEY-gP-cnp" secondAttribute="centerY" constant="254" id="rR7-GN-ROw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleLoginButton" destination="aSU-hu-1WD" id="JaV-tU-bbp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npQ-gY-Pl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="-148"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="applesign" width="848" height="152"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

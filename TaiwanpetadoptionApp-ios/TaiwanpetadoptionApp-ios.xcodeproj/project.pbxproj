@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0411A25326C2619B0072987E /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411A25226C2619B0072987E /* DataTableViewCell.swift */; };
+		044487D32744A491003B5236 /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */; };
+		044487D52744A4CC003B5236 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D42744A4CC003B5236 /* DateManager.swift */; };
+		044487D72744CFCF003B5236 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D62744CFCF003B5236 /* LoginViewController.swift */; };
+		044487D92744D0E2003B5236 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D82744D0E2003B5236 /* NotificationManager.swift */; };
+		044487DC2744D5F7003B5236 /* PetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487DB2744D5F7003B5236 /* PetData.swift */; };
 		0451EFF327425F4800019B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF227425F4800019B20 /* AppDelegate.swift */; };
 		0451EFF527425F4800019B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF427425F4800019B20 /* SceneDelegate.swift */; };
 		0451EFF727425F4800019B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF627425F4800019B20 /* ViewController.swift */; };
@@ -19,6 +24,7 @@
 		0451F01A27425F4B00019B20 /* TaiwanpetadoptionApp.Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0451F02527426B4E00019B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A326BEC75F00FFC732 /* Assets.xcassets */; };
 		0451F027274359B800019B20 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F026274359B800019B20 /* ShareViewController.swift */; };
+		0451F0292743B19200019B20 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F0282743B19200019B20 /* AddDateViewController.swift */; };
 		048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0D26CF97C700250B01 /* DetailViewController.swift */; };
 		048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */; };
 		23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */; };
@@ -32,7 +38,6 @@
 		B74EB8BD26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */; };
 		B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CA26BEC97100FFC732 /* .gitignore */; };
 		B74EB8CD26BED10F00FFC732 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */; };
-		B7E52D1226C00212000BFCEA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E52D1126C00212000BFCEA /* Data.swift */; };
 		C567CCFC731BA83EEA8C911C /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +95,12 @@
 
 /* Begin PBXFileReference section */
 		0411A25226C2619B0072987E /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		044487D42744A4CC003B5236 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		044487D62744CFCF003B5236 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		044487D82744D0E2003B5236 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		044487DA2744D24D003B5236 /* TaiwanpetadoptionApp-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TaiwanpetadoptionApp-ios.entitlements"; sourceTree = "<group>"; };
+		044487DB2744D5F7003B5236 /* PetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetData.swift; sourceTree = "<group>"; };
 		0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanpetadoptionApp.Clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0451EFF227425F4800019B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0451EFF427425F4800019B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +117,7 @@
 		0451F01527425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_ClipUITests.swift; sourceTree = "<group>"; };
 		0451F01727425F4B00019B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0451F026274359B800019B20 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		0451F0282743B19200019B20 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
 		048C1B0D26CF97C700250B01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataManager.swift; sourceTree = "<group>"; };
 		31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,7 +144,6 @@
 		B74EB8BE26BEC76000FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74EB8CA26BEC97100FFC732 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B7E52D1126C00212000BFCEA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +270,7 @@
 		B74EB89926BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */ = {
 			isa = PBXGroup;
 			children = (
+				044487DA2744D24D003B5236 /* TaiwanpetadoptionApp-ios.entitlements */,
 				B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */,
 				B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */,
 				B74EB89E26BEC75E00FFC732 /* ViewController.swift */,
@@ -266,11 +278,16 @@
 				B74EB8A326BEC75F00FFC732 /* Assets.xcassets */,
 				B74EB8A526BEC75F00FFC732 /* LaunchScreen.storyboard */,
 				B74EB8A826BEC75F00FFC732 /* Info.plist */,
-				B7E52D1126C00212000BFCEA /* Data.swift */,
 				0411A25226C2619B0072987E /* DataTableViewCell.swift */,
 				048C1B0D26CF97C700250B01 /* DetailViewController.swift */,
 				048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */,
 				0451F026274359B800019B20 /* ShareViewController.swift */,
+				0451F0282743B19200019B20 /* AddDateViewController.swift */,
+				044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */,
+				044487D42744A4CC003B5236 /* DateManager.swift */,
+				044487D62744CFCF003B5236 /* LoginViewController.swift */,
+				044487D82744D0E2003B5236 /* NotificationManager.swift */,
+				044487DB2744D5F7003B5236 /* PetData.swift */,
 			);
 			path = "TaiwanpetadoptionApp-ios";
 			sourceTree = "<group>";
@@ -667,12 +684,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0451F027274359B800019B20 /* ShareViewController.swift in Sources */,
+				044487D52744A4CC003B5236 /* DateManager.swift in Sources */,
 				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
-				B7E52D1226C00212000BFCEA /* Data.swift in Sources */,
+				044487DC2744D5F7003B5236 /* PetData.swift in Sources */,
+				044487D32744A491003B5236 /* FirebaseDatabaseManager.swift in Sources */,
 				048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */,
+				044487D92744D0E2003B5236 /* NotificationManager.swift in Sources */,
+				0451F0292743B19200019B20 /* AddDateViewController.swift in Sources */,
 				B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */,
 				0411A25326C2619B0072987E /* DataTableViewCell.swift in Sources */,
 				048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */,
+				044487D72744CFCF003B5236 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1029,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TaiwanpetadoptionApp-ios/TaiwanpetadoptionApp-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
@@ -1103,6 +1126,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TaiwanpetadoptionApp-ios/TaiwanpetadoptionApp-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
