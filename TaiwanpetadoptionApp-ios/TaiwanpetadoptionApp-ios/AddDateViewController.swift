@@ -263,6 +263,8 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         var name = nameTF.text!.isEmpty ? "" :  nameTF.text!
         var address = addTF.text!.isEmpty ?   "": addTF.text!
         var  usermessage = detailTF.text!.isEmpty ? ""  :  detailTF.text!
+        
+        var phone =  kindTF.text!.isEmpty ? ""  :  kindTF.text!
         var count = photoarray.count
         switch count {
         case 1:
@@ -291,7 +293,7 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         
    
     
-        FirebaseDatabaseManager.addData(id: useid, name: name, address: address, lat: lat, lon: lon, like: 0, unlike: 0, usermessage: usermessage, url_1: url_1, url_2: url_2, url_3: url_3, type: pickerType, kind: "")
+        FirebaseDatabaseManager.addData(id: useid, name: name, address: address, lat: lat, lon: lon, like: 0, unlike: 0, usermessage: usermessage, url_1: url_1, url_2: url_2, url_3: url_3, type: pickerType, phone: phone)
         
         setAlert()
 
@@ -305,16 +307,13 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         let controller = UIAlertController(title: "訊息通知", message:"您的發文已經發布！！", preferredStyle: .alert)
       let okAction = UIAlertAction(title: "好的", style: .default) {
         (_) in
-        let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-        let HomeVc = stroyboard.instantiateViewController(withIdentifier: "select")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-        appDelegate.window?.rootViewController = HomeVc
-        
-        
-                   }
-                   controller.addAction(okAction)
+     
+        self.dissmissView()
+      
+      }
+        controller.addAction(okAction)
                 
-                   present(controller, animated: true, completion: nil)
+        present(controller, animated: true, completion: nil)
     }
     
     

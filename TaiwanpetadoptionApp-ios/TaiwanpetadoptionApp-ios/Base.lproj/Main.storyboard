@@ -677,7 +677,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwo-T5-KEo">
                                         <rect key="frame" x="16" y="76.333333333333314" width="350" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="寵物種類:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-bm-rym">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="聯絡電話:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqx-bm-rym">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -751,7 +751,7 @@
         <!--Login View Controller-->
         <scene sceneID="v9h-yu-gYL">
             <objects>
-                <viewController storyboardIdentifier="login" id="xXX-Em-yO2" customClass="LoginViewController" customModule="healthapp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="xXX-Em-yO2" customClass="LoginViewController" customModule="TaiwanpetadoptionApp_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FEY-gP-cnp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

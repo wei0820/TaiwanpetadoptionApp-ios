@@ -27,7 +27,7 @@ struct DateItem {
     var url_2 :String
     var url_3 :String
     var type : Int
-    var kind : String
+    var phone : String
 
 
     init(snapshot: DataSnapshot) {
@@ -47,7 +47,7 @@ struct DateItem {
         self.url_2 = snapshotValue["url_2"] as! String
         self.url_3 = snapshotValue["url_3"] as! String
         self.type = snapshotValue["type"] as! Int
-        self.kind = snapshotValue["kind"] as! String
+        self.phone = snapshotValue["phone"] as! String
 
 
     }

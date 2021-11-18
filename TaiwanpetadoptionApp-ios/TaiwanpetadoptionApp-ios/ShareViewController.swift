@@ -36,6 +36,10 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
               return UITableViewCell()
           }
         
+        cell.createTimeLabel.text = "發布時間:" + dateItem[indexPath.row].date
+        cell.kindUILabel.text = "品種:" + dateItem[indexPath.row].kind
+        cell.typeLabel.text = "特徵:" + dateItem[indexPath.row].name
+        loadUrl(url: dateItem[indexPath.row].url_1, imageView: cell.dataImage)
 
 
       
@@ -57,6 +61,7 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
         
         
         setActionButton()
+        getData()
         
     
     }
@@ -73,19 +78,30 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
                              for item in snapshot.children {
             
                                  let data = DateItem(snapshot: item as! DataSnapshot)
+                                print("jack",data.name)
+                                
                                 self.dateItem.append(data)
                                  
                              }
                             self.dateItem.reverse()
+                            self.tableView.reloadData()
 
-//                            self.tableview.reloadData()
                          }
                          
                      })
         }
     
-    
-    
+    func loadUrl(url :String,imageView : UIImageView){
+        let url = URL(string: url)!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+           if let data = data, let image = UIImage(data: data) {
+              DispatchQueue.main.async {
+                imageView.image  = image
+              }
+           }
+        }
+        task.resume()
+    }
     func  setActionButton() -> Void{
          
          let actionButton = JJFloatingActionButton()
