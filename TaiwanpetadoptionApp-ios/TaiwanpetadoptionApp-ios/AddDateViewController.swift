@@ -114,11 +114,12 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         
         
         
-        kindTF.placeholder = "請輸入種類"
+        kindTF.placeholder = "請輸入電話"
         kindTF.borderStyle = .roundedRect
         kindTF.clearButtonMode = .whileEditing
         kindTF.returnKeyType = .done
         kindTF.delegate  = self
+        kindTF.keyboardType = .phonePad
 
 
 

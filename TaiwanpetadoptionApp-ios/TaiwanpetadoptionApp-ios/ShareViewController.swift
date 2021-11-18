@@ -36,11 +36,35 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
               return UITableViewCell()
           }
         
-        cell.createTimeLabel.text = "發布時間:" + dateItem[indexPath.row].date
-        cell.kindUILabel.text = "品種:" + dateItem[indexPath.row].kind
-        cell.typeLabel.text = "特徵:" + dateItem[indexPath.row].name
-        loadUrl(url: dateItem[indexPath.row].url_1, imageView: cell.dataImage)
+        cell.createTimeLabel.text = "時間:" + dateItem[indexPath.row].date
+        cell.kindUILabel.text = "名稱:" + dateItem[indexPath.row].name
+        
+        switch dateItem[indexPath.row].type {
+        case 0:
+            cell.typeLabel.text = "性別:男孩"
 
+            break
+        case 1:
+            cell.typeLabel.text = "性別:女孩"
+
+            break
+        case 3:
+            cell.typeLabel.text = "性別:不確定"
+
+            break
+        default:
+            cell.typeLabel.text = "性別:不確定"
+
+            break
+            
+        }
+        if(!dateItem[indexPath.row].url_1.isEmpty){
+            
+            loadUrl(url: dateItem[indexPath.row].url_1, imageView: cell.dataImage)
+
+        }else{
+            cell.dataImage.image = UIImage(named: "iconerror")
+        }
 
       
              return cell
