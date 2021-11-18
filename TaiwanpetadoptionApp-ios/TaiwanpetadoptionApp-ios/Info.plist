@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-7019441527375550~8190058392</string>
+	<string>ca-app-pub-7019441527375550~5820492375</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -209,5 +209,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key> NSLocationAlwaysUsageDescription </key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
+    <key>Privacy - Location Always Usage Description</key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
 </dict>
 </plist>

@@ -8,6 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		0411A25326C2619B0072987E /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0411A25226C2619B0072987E /* DataTableViewCell.swift */; };
+		044487D32744A491003B5236 /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */; };
+		044487D52744A4CC003B5236 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D42744A4CC003B5236 /* DateManager.swift */; };
+		044487D72744CFCF003B5236 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D62744CFCF003B5236 /* LoginViewController.swift */; };
+		044487D92744D0E2003B5236 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487D82744D0E2003B5236 /* NotificationManager.swift */; };
+		044487DC2744D5F7003B5236 /* PetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487DB2744D5F7003B5236 /* PetData.swift */; };
+		044487DE2744E2DE003B5236 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487DD2744E2DE003B5236 /* DateItem.swift */; };
+		044487E02745F18D003B5236 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044487DF2745F18D003B5236 /* GoogleService-Info.plist */; };
+		0451EFF327425F4800019B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF227425F4800019B20 /* AppDelegate.swift */; };
+		0451EFF527425F4800019B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF427425F4800019B20 /* SceneDelegate.swift */; };
+		0451EFF727425F4800019B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF627425F4800019B20 /* ViewController.swift */; };
+		0451EFFA27425F4800019B20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451EFF827425F4800019B20 /* Main.storyboard */; };
+		0451EFFC27425F4A00019B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0451EFFB27425F4A00019B20 /* Assets.xcassets */; };
+		0451EFFF27425F4A00019B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451EFFD27425F4A00019B20 /* LaunchScreen.storyboard */; };
+		0451F00B27425F4B00019B20 /* TaiwanpetadoptionApp_ClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F00A27425F4B00019B20 /* TaiwanpetadoptionApp_ClipTests.swift */; };
+		0451F01627425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F01527425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift */; };
+		0451F01A27425F4B00019B20 /* TaiwanpetadoptionApp.Clip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0451F02527426B4E00019B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8A326BEC75F00FFC732 /* Assets.xcassets */; };
+		0451F027274359B800019B20 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F026274359B800019B20 /* ShareViewController.swift */; };
+		0451F0292743B19200019B20 /* AddDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451F0282743B19200019B20 /* AddDateViewController.swift */; };
+		048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0D26CF97C700250B01 /* DetailViewController.swift */; };
+		048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */; };
 		23A62599F370A74AFFC5C7C5 /* Pods_TaiwanpetadoptionApp_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A0FFD40F78D6FDB584C1438 /* Pods_TaiwanpetadoptionApp_ios.framework */; };
 		3A0FA8EF4EE3AC219F12913F /* Pods_TaiwanpetadoptionApp_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F2D1E383BCACCBDB138349 /* Pods_TaiwanpetadoptionApp_iosTests.framework */; };
 		B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */; };
@@ -18,12 +39,31 @@
 		B74EB8B226BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8B126BEC75F00FFC732 /* TaiwanpetadoptionApp_iosTests.swift */; };
 		B74EB8BD26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */; };
 		B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CA26BEC97100FFC732 /* .gitignore */; };
-		B74EB8CD26BED10F00FFC732 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */; };
-		B7E52D1226C00212000BFCEA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E52D1126C00212000BFCEA /* Data.swift */; };
 		C567CCFC731BA83EEA8C911C /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0451F00727425F4B00019B20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EB88F26BEC75E00FFC732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0451EFEF27425F4800019B20;
+			remoteInfo = TaiwanpetadoptionApp.Clip;
+		};
+		0451F01227425F4B00019B20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EB88F26BEC75E00FFC732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0451EFEF27425F4800019B20;
+			remoteInfo = TaiwanpetadoptionApp.Clip;
+		};
+		0451F01827425F4B00019B20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B74EB88F26BEC75E00FFC732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0451EFEF27425F4800019B20;
+			remoteInfo = TaiwanpetadoptionApp.Clip;
+		};
 		B74EB8AE26BEC75F00FFC732 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B74EB88F26BEC75E00FFC732 /* Project object */;
@@ -40,8 +80,49 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0451F01B27425F4B00019B20 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				0451F01A27425F4B00019B20 /* TaiwanpetadoptionApp.Clip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0411A25226C2619B0072987E /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
+		044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		044487D42744A4CC003B5236 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		044487D62744CFCF003B5236 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		044487D82744D0E2003B5236 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		044487DA2744D24D003B5236 /* TaiwanpetadoptionApp-ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "TaiwanpetadoptionApp-ios.entitlements"; sourceTree = "<group>"; };
+		044487DB2744D5F7003B5236 /* PetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetData.swift; sourceTree = "<group>"; };
+		044487DD2744E2DE003B5236 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
+		044487DF2745F18D003B5236 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanpetadoptionApp.Clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0451EFF227425F4800019B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0451EFF427425F4800019B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0451EFF627425F4800019B20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0451EFF927425F4800019B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0451EFFB27425F4A00019B20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0451EFFE27425F4A00019B20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0451F00027425F4A00019B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0451F00127425F4A00019B20 /* TaiwanpetadoptionApp_Clip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TaiwanpetadoptionApp_Clip.entitlements; sourceTree = "<group>"; };
+		0451F00627425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiwanpetadoptionApp.ClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0451F00A27425F4B00019B20 /* TaiwanpetadoptionApp_ClipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_ClipTests.swift; sourceTree = "<group>"; };
+		0451F00C27425F4B00019B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0451F01127425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaiwanpetadoptionApp.ClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0451F01527425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_ClipUITests.swift; sourceTree = "<group>"; };
+		0451F01727425F4B00019B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0451F026274359B800019B20 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		0451F0282743B19200019B20 /* AddDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDateViewController.swift; sourceTree = "<group>"; };
+		048C1B0D26CF97C700250B01 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDataManager.swift; sourceTree = "<group>"; };
 		31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-iosTests/Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4316AEA29D23295A9DA37D29 /* Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaiwanpetadoptionApp-ios.release.xcconfig"; path = "Target Support Files/Pods-TaiwanpetadoptionApp-ios/Pods-TaiwanpetadoptionApp-ios.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,11 +146,30 @@
 		B74EB8BC26BEC76000FFC732 /* TaiwanpetadoptionApp_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaiwanpetadoptionApp_iosUITests.swift; sourceTree = "<group>"; };
 		B74EB8BE26BEC76000FFC732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B74EB8CA26BEC97100FFC732 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		B7E52D1126C00212000BFCEA /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0451EFED27425F4800019B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0451F00327425F4B00019B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0451F00E27425F4B00019B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B74EB89426BEC75E00FFC732 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +197,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0451EFF127425F4800019B20 /* TaiwanpetadoptionApp.Clip */ = {
+			isa = PBXGroup;
+			children = (
+				0451EFF227425F4800019B20 /* AppDelegate.swift */,
+				0451EFF427425F4800019B20 /* SceneDelegate.swift */,
+				0451EFF627425F4800019B20 /* ViewController.swift */,
+				0451EFF827425F4800019B20 /* Main.storyboard */,
+				0451EFFB27425F4A00019B20 /* Assets.xcassets */,
+				0451EFFD27425F4A00019B20 /* LaunchScreen.storyboard */,
+				0451F00027425F4A00019B20 /* Info.plist */,
+				0451F00127425F4A00019B20 /* TaiwanpetadoptionApp_Clip.entitlements */,
+			);
+			path = TaiwanpetadoptionApp.Clip;
+			sourceTree = "<group>";
+		};
+		0451F00927425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests */ = {
+			isa = PBXGroup;
+			children = (
+				0451F00A27425F4B00019B20 /* TaiwanpetadoptionApp_ClipTests.swift */,
+				0451F00C27425F4B00019B20 /* Info.plist */,
+			);
+			path = TaiwanpetadoptionApp.ClipTests;
+			sourceTree = "<group>";
+		};
+		0451F01427425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0451F01527425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift */,
+				0451F01727425F4B00019B20 /* Info.plist */,
+			);
+			path = TaiwanpetadoptionApp.ClipUITests;
+			sourceTree = "<group>";
+		};
 		AEB4048EDBB3F60B0743953A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +247,9 @@
 				B74EB89926BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */,
 				B74EB8B026BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests */,
 				B74EB8BB26BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests */,
+				0451EFF127425F4800019B20 /* TaiwanpetadoptionApp.Clip */,
+				0451F00927425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests */,
+				0451F01427425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests */,
 				B74EB89826BEC75E00FFC732 /* Products */,
 				BE67B546B2905080089ADB54 /* Pods */,
 				AEB4048EDBB3F60B0743953A /* Frameworks */,
@@ -126,6 +262,9 @@
 				B74EB89726BEC75E00FFC732 /* TaiwanpetadoptionApp-ios.app */,
 				B74EB8AD26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests.xctest */,
 				B74EB8B826BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests.xctest */,
+				0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */,
+				0451F00627425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests.xctest */,
+				0451F01127425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,15 +272,25 @@
 		B74EB89926BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */ = {
 			isa = PBXGroup;
 			children = (
-				B74EB8CC26BED10F00FFC732 /* GoogleService-Info.plist */,
+				044487DA2744D24D003B5236 /* TaiwanpetadoptionApp-ios.entitlements */,
+				044487DF2745F18D003B5236 /* GoogleService-Info.plist */,
 				B74EB89A26BEC75E00FFC732 /* AppDelegate.swift */,
 				B74EB89E26BEC75E00FFC732 /* ViewController.swift */,
 				B74EB8A026BEC75E00FFC732 /* Main.storyboard */,
 				B74EB8A326BEC75F00FFC732 /* Assets.xcassets */,
 				B74EB8A526BEC75F00FFC732 /* LaunchScreen.storyboard */,
 				B74EB8A826BEC75F00FFC732 /* Info.plist */,
-				B7E52D1126C00212000BFCEA /* Data.swift */,
 				0411A25226C2619B0072987E /* DataTableViewCell.swift */,
+				048C1B0D26CF97C700250B01 /* DetailViewController.swift */,
+				048C1B0F26D4DDA100250B01 /* OpenDataManager.swift */,
+				0451F026274359B800019B20 /* ShareViewController.swift */,
+				0451F0282743B19200019B20 /* AddDateViewController.swift */,
+				044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */,
+				044487D42744A4CC003B5236 /* DateManager.swift */,
+				044487D62744CFCF003B5236 /* LoginViewController.swift */,
+				044487D82744D0E2003B5236 /* NotificationManager.swift */,
+				044487DB2744D5F7003B5236 /* PetData.swift */,
+				044487DD2744E2DE003B5236 /* DateItem.swift */,
 			);
 			path = "TaiwanpetadoptionApp-ios";
 			sourceTree = "<group>";
@@ -180,6 +329,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0451EFEF27425F4800019B20 /* TaiwanpetadoptionApp.Clip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0451F02227425F4B00019B20 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp.Clip" */;
+			buildPhases = (
+				0451EFEC27425F4800019B20 /* Sources */,
+				0451EFED27425F4800019B20 /* Frameworks */,
+				0451EFEE27425F4800019B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaiwanpetadoptionApp.Clip;
+			productName = TaiwanpetadoptionApp.Clip;
+			productReference = 0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		0451F00527425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0451F02327425F4B00019B20 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp.ClipTests" */;
+			buildPhases = (
+				0451F00227425F4B00019B20 /* Sources */,
+				0451F00327425F4B00019B20 /* Frameworks */,
+				0451F00427425F4B00019B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0451F00827425F4B00019B20 /* PBXTargetDependency */,
+			);
+			name = TaiwanpetadoptionApp.ClipTests;
+			productName = TaiwanpetadoptionApp.ClipTests;
+			productReference = 0451F00627425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0451F01027425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0451F02427425F4B00019B20 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp.ClipUITests" */;
+			buildPhases = (
+				0451F00D27425F4B00019B20 /* Sources */,
+				0451F00E27425F4B00019B20 /* Frameworks */,
+				0451F00F27425F4B00019B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0451F01327425F4B00019B20 /* PBXTargetDependency */,
+			);
+			name = TaiwanpetadoptionApp.ClipUITests;
+			productName = TaiwanpetadoptionApp.ClipUITests;
+			productReference = 0451F01127425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B74EB8C126BEC76000FFC732 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp-ios" */;
@@ -189,10 +391,12 @@
 				B74EB89426BEC75E00FFC732 /* Frameworks */,
 				B74EB89526BEC75E00FFC732 /* Resources */,
 				0D0A6D4C779EBD0F51182084 /* [CP] Embed Pods Frameworks */,
+				0451F01B27425F4B00019B20 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0451F01927425F4B00019B20 /* PBXTargetDependency */,
 			);
 			name = "TaiwanpetadoptionApp-ios";
 			productName = "TaiwanpetadoptionApp-ios";
@@ -247,6 +451,17 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					0451EFEF27425F4800019B20 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					0451F00527425F4B00019B20 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 0451EFEF27425F4800019B20;
+					};
+					0451F01027425F4B00019B20 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 0451EFEF27425F4800019B20;
+					};
 					B74EB89626BEC75E00FFC732 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -276,18 +491,46 @@
 				B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */,
 				B74EB8AC26BEC75F00FFC732 /* TaiwanpetadoptionApp-iosTests */,
 				B74EB8B726BEC76000FFC732 /* TaiwanpetadoptionApp-iosUITests */,
+				0451EFEF27425F4800019B20 /* TaiwanpetadoptionApp.Clip */,
+				0451F00527425F4B00019B20 /* TaiwanpetadoptionApp.ClipTests */,
+				0451F01027425F4B00019B20 /* TaiwanpetadoptionApp.ClipUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0451EFEE27425F4800019B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0451EFFF27425F4A00019B20 /* LaunchScreen.storyboard in Resources */,
+				0451EFFC27425F4A00019B20 /* Assets.xcassets in Resources */,
+				0451F02527426B4E00019B20 /* Assets.xcassets in Resources */,
+				0451EFFA27425F4800019B20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0451F00427425F4B00019B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0451F00F27425F4B00019B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B74EB89526BEC75E00FFC732 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B74EB8CD26BED10F00FFC732 /* GoogleService-Info.plist in Resources */,
 				B74EB8CB26BEC97100FFC732 /* .gitignore in Resources */,
 				B74EB8A726BEC75F00FFC732 /* LaunchScreen.storyboard in Resources */,
+				044487E02745F18D003B5236 /* GoogleService-Info.plist in Resources */,
 				B74EB8A426BEC75F00FFC732 /* Assets.xcassets in Resources */,
 				B74EB8A226BEC75E00FFC732 /* Main.storyboard in Resources */,
 			);
@@ -413,14 +656,49 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0451EFEC27425F4800019B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0451EFF727425F4800019B20 /* ViewController.swift in Sources */,
+				0451EFF327425F4800019B20 /* AppDelegate.swift in Sources */,
+				0451EFF527425F4800019B20 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0451F00227425F4B00019B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0451F00B27425F4B00019B20 /* TaiwanpetadoptionApp_ClipTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0451F00D27425F4B00019B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0451F01627425F4B00019B20 /* TaiwanpetadoptionApp_ClipUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B74EB89326BEC75E00FFC732 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0451F027274359B800019B20 /* ShareViewController.swift in Sources */,
+				044487D52744A4CC003B5236 /* DateManager.swift in Sources */,
 				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
-				B7E52D1226C00212000BFCEA /* Data.swift in Sources */,
+				044487DC2744D5F7003B5236 /* PetData.swift in Sources */,
+				044487D32744A491003B5236 /* FirebaseDatabaseManager.swift in Sources */,
+				048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */,
+				044487D92744D0E2003B5236 /* NotificationManager.swift in Sources */,
+				0451F0292743B19200019B20 /* AddDateViewController.swift in Sources */,
 				B74EB89B26BEC75E00FFC732 /* AppDelegate.swift in Sources */,
 				0411A25326C2619B0072987E /* DataTableViewCell.swift in Sources */,
+				044487DE2744E2DE003B5236 /* DateItem.swift in Sources */,
+				048C1B1026D4DDA100250B01 /* OpenDataManager.swift in Sources */,
+				044487D72744CFCF003B5236 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +721,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0451F00827425F4B00019B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0451EFEF27425F4800019B20 /* TaiwanpetadoptionApp.Clip */;
+			targetProxy = 0451F00727425F4B00019B20 /* PBXContainerItemProxy */;
+		};
+		0451F01327425F4B00019B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0451EFEF27425F4800019B20 /* TaiwanpetadoptionApp.Clip */;
+			targetProxy = 0451F01227425F4B00019B20 /* PBXContainerItemProxy */;
+		};
+		0451F01927425F4B00019B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0451EFEF27425F4800019B20 /* TaiwanpetadoptionApp.Clip */;
+			targetProxy = 0451F01827425F4B00019B20 /* PBXContainerItemProxy */;
+		};
 		B74EB8AF26BEC75F00FFC732 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B74EB89626BEC75E00FFC732 /* TaiwanpetadoptionApp-ios */;
@@ -456,6 +749,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0451EFF827425F4800019B20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0451EFF927425F4800019B20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0451EFFD27425F4A00019B20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0451EFFE27425F4A00019B20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		B74EB8A026BEC75E00FFC732 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -475,6 +784,134 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0451F01C27425F4B00019B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TaiwanpetadoptionApp.Clip/TaiwanpetadoptionApp_Clip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = TaiwanpetadoptionApp.Clip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios.Clip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0451F01D27425F4B00019B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TaiwanpetadoptionApp.Clip/TaiwanpetadoptionApp_Clip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = TaiwanpetadoptionApp.Clip/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios.Clip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0451F01E27425F4B00019B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = TaiwanpetadoptionApp.ClipTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios.TaiwanpetadoptionApp-ClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiwanpetadoptionApp.Clip.app/TaiwanpetadoptionApp.Clip";
+			};
+			name = Debug;
+		};
+		0451F01F27425F4B00019B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = TaiwanpetadoptionApp.ClipTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios.TaiwanpetadoptionApp-ClipTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaiwanpetadoptionApp.Clip.app/TaiwanpetadoptionApp.Clip";
+			};
+			name = Release;
+		};
+		0451F02027425F4B00019B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = TaiwanpetadoptionApp.ClipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios.TaiwanpetadoptionApp-ClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaiwanpetadoptionApp.Clip;
+			};
+			name = Debug;
+		};
+		0451F02127425F4B00019B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9SDG9LYLGC;
+				INFOPLIST_FILE = TaiwanpetadoptionApp.ClipUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios.TaiwanpetadoptionApp-ClipUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaiwanpetadoptionApp.Clip;
+			};
+			name = Release;
+		};
 		B74EB8BF26BEC76000FFC732 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -597,15 +1034,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFEF760704ECCE67A4455EDF /* Pods-TaiwanpetadoptionApp-ios.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TaiwanpetadoptionApp-ios/TaiwanpetadoptionApp-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
 				INFOPLIST_FILE = "TaiwanpetadoptionApp-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -679,10 +1120,10 @@
 					"-weak_framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -690,15 +1131,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "TaiwanpetadoptionApp-ios/TaiwanpetadoptionApp-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
 				INFOPLIST_FILE = "TaiwanpetadoptionApp-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -772,10 +1217,10 @@
 					"-weak_framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jackpan.TaiwanpetadoptionApp-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jack.TaiwanpetadoptionApp-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -870,6 +1315,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0451F02227425F4B00019B20 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp.Clip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0451F01C27425F4B00019B20 /* Debug */,
+				0451F01D27425F4B00019B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0451F02327425F4B00019B20 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp.ClipTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0451F01E27425F4B00019B20 /* Debug */,
+				0451F01F27425F4B00019B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0451F02427425F4B00019B20 /* Build configuration list for PBXNativeTarget "TaiwanpetadoptionApp.ClipUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0451F02027425F4B00019B20 /* Debug */,
+				0451F02127425F4B00019B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B74EB89226BEC75E00FFC732 /* Build configuration list for PBXProject "TaiwanpetadoptionApp-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

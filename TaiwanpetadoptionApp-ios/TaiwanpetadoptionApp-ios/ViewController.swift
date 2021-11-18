@@ -13,15 +13,13 @@ import GoogleMobileAds
 import JGProgressHUD
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
-//    func onVpadnAdLoaded(_ banner: VpadnBanner) {
-//
-//        self.bannerVIew.addSubview(banner.getVpadnAdView())
-//    }
-    
+    var refreshControl:UIRefreshControl!
+
+    var urlString = ""
     @IBOutlet weak var bannerVIew: UIView!
 //    var vpadnBanner: VpadnBanner!
-
-    var arrayData :[Data] = [Data]()
+    var myIndex : IndexPath = IndexPath()
+    var arrayData :[PetData] = [PetData]()
     
     struct CellIdentifier {
         static let identifier = "dataCell"
@@ -68,6 +66,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getData()
+
         if #available(iOS 13.0, *) {
                  overrideUserInterfaceStyle = .light
              } else {
@@ -75,14 +76,56 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
              }
         tableView.dataSource = self
         tableView.delegate = self
-//        ATTrackingManager.requestTrackingAuthorization(completionHandler: { [self] status in
-//          // Tracking authorization completed. Start loading ads here.
-//            setAdBanner()
-//        })
-        setAdBanner()
-            
-        getData()
         
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "更新中...")
+               
+        refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+
+        if #available(iOS 14, *) {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                //you got permission to track
+                self.setAdBanner()
+                
+
+            })
+        } else {
+            //you got permission to track, iOS 14 is not yet installed
+        }
+            
+        
+    }
+    
+    @objc func loadData(){
+ 
+//
+        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
+            
+            if(response.value != nil && response.value!.count >= 0){
+                arrayData.removeAll()
+                response.value?.forEach({ Data in
+                    if(Data != nil){
+                        arrayData.append(Data)
+                
+
+                    }
+
+                })
+            }
+  
+
+        }.downloadProgress { progress in
+            
+            if(Float(progress.fractionCompleted) == 1.0){
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+
+            }
+            
+        }
+
+
     }
     func loadUrl(url :String,imageView : UIImageView){
         let url = URL(string: url)!
@@ -103,43 +146,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             adBannerView!.delegate = self
             adBannerView!.rootViewController = self
             adBannerView!.load(GADRequest())
-//        vpadnBanner = VpadnBanner.init(licenseKey: "8a80854b6a47fb18016a6ccd89e26240", adSize: VpadnAdSizeSmartBannerPortrait)
-//        vpadnBanner.delegate = self
-//        vpadnBanner.load(initialRequest())
-//        }
-//
-//    func initialRequest() -> VpadnAdRequest {
-//        let request = VpadnAdRequest.init()
-////        request.setTestDevices([ASIdentifierManager.shared().advertisingIdentifier.uuidString])     //取得測試廣告
-//            request.setAutoRefresh(true)                                                                //僅限於 Banner
-////        request.setUserInfoGender(.genderMale)                                                      //性別
-////        request.setUserInfoBirthdayWithYear(2000, month: 08, andDay: 17)                            //生日
-////        request.setMaxAdContentRating(.general)                                                     //最高可投放的年齡(分類)限制
-////        request.setTagForUnderAgeOfConsent(.false)                                                  //是否專為特定年齡投放
-////        request.setTagForChildDirectedTreatment(.false)                                             //是否專為兒童投放
-////        request.setContentUrl("https://www.google.com.tw/")                                         //內容
-////        request.setContentData(["key1": 1, "key2": true, "key3": "name", "key4": 123.31])           //內容鍵值
-//        return request
     }
 //
     
     func getData(){
         let hud = JGProgressHUD()
 
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [Data].self) { [self] (response) in
+        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
             response.value?.forEach({ Data in
-//                print("test",Data)
-//                print("test",Data.animal_age)
                 arrayData.append(Data)
                 tableView.reloadData()
 
             })
 
         }.downloadProgress { progress in
-            print("Download Progress: \(progress.fractionCompleted * 100)")
             hud.setProgress(Float(progress.fractionCompleted), animated: true)
             hud.shadow = JGProgressHUDShadow(color: .black, offset: .zero, radius: 5.0, opacity: 0.2)
-            hud.textLabel.text = "下載中"
+            hud.textLabel.text = "讀取中"
             hud.detailTextLabel.text = String(format: "%.0f",(progress.fractionCompleted * 100)) + "%"
             hud.show(in: self.view)
             if(Float(progress.fractionCompleted) == 1.0){
@@ -150,14 +173,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
     }
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        let name = arrayData[indexPath.row].animal_age
-        
-    
-    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//          tableView.deselectRow(
+//              at: indexPath, animated: true)
+        myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
+        performSegue(withIdentifier: "detailcv", sender: nil)
 
+
+      }
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let controller = segue.destination as? DetailViewController
+        let indexPath = tableView.indexPathForSelectedRow
+    controller?.animalkind = arrayData[indexPath!.row].animal_kind
+    controller?.album_file = arrayData[indexPath!.row].album_file
+    controller?.animal_sex = arrayData[indexPath!.row].animal_sex
+    controller?.animal_bodytype = arrayData[indexPath!.row].animal_bodytype
+    controller?.animal_colour = arrayData[indexPath!.row].animal_colour
+    controller?.animal_age = arrayData[indexPath!.row].animal_age
+    controller?.animal_sterilization = arrayData[indexPath!.row].animal_sterilization
+    controller?.animal_bacterin = arrayData[indexPath!.row].animal_bacterin
+    controller?.animal_foundplace = arrayData[indexPath!.row].animal_foundplace
+    controller?.shelter_name = arrayData[indexPath!.row].shelter_name
+    controller?.shelter_address = arrayData[indexPath!.row].shelter_address
+    controller?.shelter_tel = arrayData[indexPath!.row].shelter_tel
     
+
+   }
     func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
       print("bannerViewDidReceiveAd")
     }
@@ -183,7 +226,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func addBannerViewToView(_ bannerView: GADBannerView) {
-            bannerView.translatesAutoresizingMaskIntoConstraints = false
+            bannerView.translatesAutoresizingMaskIntoConstraints = true
             view.addSubview(bannerView)
             view.addConstraints(
                 [NSLayoutConstraint(item: bannerView,
