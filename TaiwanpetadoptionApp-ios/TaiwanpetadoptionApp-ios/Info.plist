@@ -209,5 +209,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    
+    <key> NSLocationAlwaysUsageDescription </key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
+    <key>Privacy - Location Always Usage Description</key>
+    <string> App 需要您的同意, 才能始終訪問位置</string>
 </dict>
 </plist>

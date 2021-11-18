@@ -15,6 +15,7 @@ import JGProgressHUD
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
     var refreshControl:UIRefreshControl!
 
+    var urlString = ""
     @IBOutlet weak var bannerVIew: UIView!
 //    var vpadnBanner: VpadnBanner!
     var myIndex : IndexPath = IndexPath()

@@ -12,19 +12,20 @@ import AdSupport
 import GoogleMobileAds
 import JGProgressHUD
 import JJFloatingActionButton
+import Firebase
 
 class ShareViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
-    
+    var dateItem: [DateItem] = [DateItem]()
+
     var myIndex : IndexPath = IndexPath()
-    var arrayData :[PetData] = [PetData]()
     @IBOutlet weak var tableView: UITableView!
     struct CellIdentifier {
         static let identifier = "dataCell"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayData.count
+        return dateItem.count
 
     }
     
@@ -59,6 +60,30 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
         
     
     }
+    
+    
+    func  getData(){
+
+        let reference: DatabaseReference! = Database.database().reference().child("SharePet").child("SharePet")
+
+            reference.queryOrderedByKey().observe(.value, with: { snapshot in
+                         if snapshot.childrenCount > 0 {
+                            self.dateItem.removeAll()
+
+                             for item in snapshot.children {
+            
+                                 let data = DateItem(snapshot: item as! DataSnapshot)
+                                self.dateItem.append(data)
+                                 
+                             }
+                            self.dateItem.reverse()
+
+//                            self.tableview.reloadData()
+                         }
+                         
+                     })
+        }
+    
     
     
     func  setActionButton() -> Void{

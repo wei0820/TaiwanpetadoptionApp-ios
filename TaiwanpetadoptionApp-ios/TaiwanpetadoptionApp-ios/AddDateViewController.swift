@@ -337,7 +337,9 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
   
               // 當判斷有 selectedImage 時，我們會在 if 判斷式裡將圖片上傳
               if let selectedImage = selectedImageFromPicker {
-                  
+                print("jack","AddDateViewController")
+
+                  print("jack",useid)
                   let storageRef = Storage.storage().reference().child(useid).child("\(uniqueString).png")
                   
                   if let uploadData = selectedImage.pngData() {
@@ -346,6 +348,7 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
                           
                           if error != nil {
                               
+                            print("jack",error.debugDescription)
                               // 若有接收到錯誤，我們就直接印在 Console 就好，在這邊就不另外做處理。
                               return
                           }
@@ -394,6 +397,9 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
          self.view.endEditing(true)
      }
     
-    
+    func dissmissView(){
+         dismiss(animated: true, completion: nil)
+         
+     }
     
 }

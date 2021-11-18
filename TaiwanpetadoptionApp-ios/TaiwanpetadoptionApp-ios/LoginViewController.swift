@@ -30,10 +30,11 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
     func checkLoginState(){
         if Auth.auth().currentUser != nil {
           // User is signed in.
-                 let stroyboard = UIStoryboard(name: "Main", bundle: nil);
-                 let HomeVc = stroyboard.instantiateViewController(withIdentifier: "home")
-                 let appDelegate = UIApplication.shared.delegate as! AppDelegate;
-                 appDelegate.window?.rootViewController = HomeVc
+            let user = Auth.auth().currentUser
+            print("jack",user?.uid)
+
+            dissmissView()
+
         }
         
     }
@@ -57,15 +58,66 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
             guard let user = result?.user else {return}
             let isGuest = user.isAnonymous
             let uid = user.uid
+            dissmissView()
             
-            setJump(type: "home")
         }
         
 
         
         
     }
-    
+ 
+     
+       func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+                   
+           if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+                guard let nonce = currentNonce else {
+                   fatalError("Invalid state: A login callback was received, but no login request was sent.")
+                 }
+
+                 guard let appleIDToken = appleIDCredential.identityToken else {
+                   print("Unable to fetch identity token")
+                   return
+                 }
+                 guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+                   print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                   return
+                 }
+               let credential = OAuthProvider.credential(withProviderID: "apple.com",
+                                                          idToken: idTokenString,
+                                                          rawNonce: nonce)
+               Auth.auth().signIn(with: credential) { (authResult, error) in
+                   if (error != nil) {
+                        // Error. If error.code == .MissingOrInvalidNonce, make sure
+                        // you're sending the SHA256-hashed nonce as a hex string with
+                        // your request to Apple.
+                        return
+                      }
+               }
+            dissmissView()
+            
+           }
+       }
+
+       func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+                   
+           switch (error) {
+           case ASAuthorizationError.canceled:
+               break
+           case ASAuthorizationError.failed:
+               break
+           case ASAuthorizationError.invalidResponse:
+               break
+           case ASAuthorizationError.notHandled:
+               break
+           case ASAuthorizationError.unknown:
+               break
+           default:
+               break
+           }
+                       
+           print("didCompleteWithError: \(error.localizedDescription)")
+       }
     @IBAction func appleIdLoginAction(_ sender: Any) {
         let nonce = randomNonceString()
                currentNonce = nonce
@@ -80,7 +132,7 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
                authorizationController.performRequests()
         
         
-        
+
         
     }
     
@@ -126,4 +178,9 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
 
       return hashString
     }
+    
+    func dissmissView(){
+         dismiss(animated: true, completion: nil)
+         
+     }
 }
