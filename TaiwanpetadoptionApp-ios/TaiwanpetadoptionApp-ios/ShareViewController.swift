@@ -168,5 +168,25 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
                 }
          
      }
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//          tableView.deselectRow(
+//              at: indexPath, animated: true)
+        myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
+        performSegue(withIdentifier: "sharedetailcv", sender: nil)
+
+
+      }
+   
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        let controller = segue.destination as? ShareDetailViewController
+        let indexPath = tableView.indexPathForSelectedRow
+        controller?.album_file = dateItem[indexPath!.row].url_1
+
+        controller?.shelter_name = dateItem[indexPath!.row].name
+        controller?.shelter_address = dateItem[indexPath!.row].address
+        controller?.shelter_tel = dateItem[indexPath!.row].phone
+    
+
+   }
 }
