@@ -14,7 +14,7 @@ import JGProgressHUD
 import JJFloatingActionButton
 import Firebase
 
-class ShareViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
+class ShareViewController: BaseViewController , UITableViewDataSource, UITableViewDelegate{
     
     var dateItem: [DateItem] = [DateItem]()
 
@@ -74,13 +74,6 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            
-                       // Fallback on earlier versions
-        }
         tableView.dataSource = self
         tableView.delegate = self
         

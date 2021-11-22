@@ -13,7 +13,7 @@ import CLImagePickerTool
 import Firebase
 import Toaster
 
-class AddDateViewController: UIViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
+class AddDateViewController: BaseViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

@@ -12,12 +12,11 @@ import AdSupport
 import GoogleMobileAds
 import JGProgressHUD
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
+class ViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
     var refreshControl:UIRefreshControl!
 
     var urlString = ""
     @IBOutlet weak var bannerVIew: UIView!
-//    var vpadnBanner: VpadnBanner!
     var myIndex : IndexPath = IndexPath()
     var arrayData :[PetData] = [PetData]()
     
@@ -69,11 +68,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         getData()
 
-        if #available(iOS 13.0, *) {
-                 overrideUserInterfaceStyle = .light
-             } else {
-                 // Fallback on earlier versions
-             }
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -83,24 +77,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
 
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                //you got permission to track
-                self.setAdBanner()
-                
+        setAdBanner()
 
-            })
-        } else {
-            //you got permission to track, iOS 14 is not yet installed
-        }
-            
         
     }
     
     @objc func loadData(){
- 
-//
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
+        
+         AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
             
             if(response.value != nil && response.value!.count >= 0){
                 arrayData.removeAll()
@@ -147,7 +131,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             adBannerView!.rootViewController = self
             adBannerView!.load(GADRequest())
     }
-//
     
     func getData(){
         let hud = JGProgressHUD()

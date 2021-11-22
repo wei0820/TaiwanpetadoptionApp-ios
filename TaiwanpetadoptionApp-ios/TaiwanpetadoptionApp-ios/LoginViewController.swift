@@ -10,7 +10,7 @@ import AuthenticationServices
 import CryptoKit
 import Security
 import Firebase
-class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
+class LoginViewController: BaseViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
     @IBOutlet weak var appleLoginButton: UIButton!
     fileprivate var currentNonce: String?
     let notificationManager : NotificationManager = NotificationManager()

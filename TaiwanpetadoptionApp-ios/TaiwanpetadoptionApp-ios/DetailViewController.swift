@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: BaseViewController {
     var animalkind  : String?
     var animal_sex  : String?
     var animal_bodytype  : String?
@@ -42,12 +42,6 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        if #available(iOS 13.0, *) {
-                 overrideUserInterfaceStyle = .light
-             } else {
-                 // Fallback on earlier versions
-             }
         loadUrl(url: album_file!, imageView: imageView)
         animal_kind.text = "種類:" + animalkind!
         sexLabel.text = "性別:"  + animal_sex!
