@@ -324,7 +324,22 @@ class AddDateViewController: UIViewController , CLLocationManagerDelegate,UIText
         
     }
     
+    func resizeImage(image: UIImage, width: CGFloat) -> UIImage {
+            let size = CGSize(width: width, height:
+                image.size.height * width / image.size.width)
+            let renderer = UIGraphicsImageRenderer(size: size)
+            let newImage = renderer.image { (context) in
+                image.draw(in: renderer.format.bounds)
+            }
+            return newImage
+    }
+
+    
 }
+
+
+
+
 extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController,
        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -337,14 +352,13 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
   
               // 當判斷有 selectedImage 時，我們會在 if 判斷式裡將圖片上傳
               if let selectedImage = selectedImageFromPicker {
-                print("jack","AddDateViewController")
 
-                  print("jack",useid)
                   let storageRef = Storage.storage().reference().child(useid).child("\(uniqueString).png")
+                var img = self.resizeImage(image: selectedImage, width: 120)
                   
-                  if let uploadData = selectedImage.pngData() {
+                if let uploadData = img.pngData() {
                       // 這行就是 FirebaseStroge 關鍵的存取方法。
-                      storageRef.putData(uploadData, metadata: nil, completion: { (data, error) in
+                    storageRef.putData(uploadData, metadata: nil, completion: { (data, error) in
                           
                           if error != nil {
                               
@@ -368,17 +382,11 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
                                     uploadImagButton.isEnabled = false
                                     uploadImagButton.setTitle("已達上傳上限", for:.normal)
                                 }
-                            
-
-                            
-
-                         
-
+                       
                             }
                          
                             
-
-                          }
+                        }
           
                       })
                   }
@@ -401,5 +409,7 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
          dismiss(animated: true, completion: nil)
          
      }
+    
+    
     
 }

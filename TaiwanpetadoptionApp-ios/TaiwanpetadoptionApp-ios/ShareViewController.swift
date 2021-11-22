@@ -60,6 +60,7 @@ class ShareViewController: UIViewController , UITableViewDataSource, UITableView
         }
         if(!dateItem[indexPath.row].url_1.isEmpty){
             
+            print("jack",dateItem[indexPath.row].url_1)
             loadUrl(url: dateItem[indexPath.row].url_1, imageView: cell.dataImage)
 
         }else{
