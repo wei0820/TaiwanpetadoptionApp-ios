@@ -12,12 +12,11 @@ import AdSupport
 import GoogleMobileAds
 import JGProgressHUD
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, GADBannerViewDelegate{
+class ViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate{
     var refreshControl:UIRefreshControl!
-
-    var urlString = ""
+    
+    var pathUrl = "https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL"
     @IBOutlet weak var bannerVIew: UIView!
-//    var vpadnBanner: VpadnBanner!
     var myIndex : IndexPath = IndexPath()
     var arrayData :[PetData] = [PetData]()
     
@@ -55,13 +54,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.kindUILabel.text = "品種:" + arrayData[indexPath.row].animal_kind
 
         cell.typeLabel.text = "特徵:" + arrayData[indexPath.row].animal_colour + "的" + sex
-
-
-    
+        
            return cell
        }
     
-    var adBannerView: GADBannerView!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -69,11 +65,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         getData()
 
-        if #available(iOS 13.0, *) {
-                 overrideUserInterfaceStyle = .light
-             } else {
-                 // Fallback on earlier versions
-             }
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -83,24 +74,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
 
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
-                //you got permission to track
-                self.setAdBanner()
-                
 
-            })
-        } else {
-            //you got permission to track, iOS 14 is not yet installed
-        }
-            
         
     }
     
     @objc func loadData(){
- 
-//
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
+        
+         AF.request(pathUrl).responseDecodable(of: [PetData].self) { [self] (response) in
             
             if(response.value != nil && response.value!.count >= 0){
                 arrayData.removeAll()
@@ -139,20 +119,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         task.resume()
     }
 
-    func setAdBanner(){
-            let id = "ca-app-pub-3940256099942544/2934735716"
-            adBannerView = GADBannerView(adSize: kGADAdSizeBanner)
-            adBannerView!.adUnitID = id
-            adBannerView!.delegate = self
-            adBannerView!.rootViewController = self
-            adBannerView!.load(GADRequest())
-    }
-//
+
     
     func getData(){
         let hud = JGProgressHUD()
 
-        AF.request("https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL").responseDecodable(of: [PetData].self) { [self] (response) in
+        AF.request(pathUrl).responseDecodable(of: [PetData].self) { [self] (response) in
             response.value?.forEach({ Data in
                 arrayData.append(Data)
                 tableView.reloadData()
@@ -174,8 +146,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//          tableView.deselectRow(
-//              at: indexPath, animated: true)
+        
         myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
         performSegue(withIdentifier: "detailcv", sender: nil)
 
@@ -201,50 +172,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 
    }
-    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-      print("bannerViewDidReceiveAd")
-    }
 
-    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-      print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-
-    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
-      print("bannerViewDidRecordImpression")
-    }
-
-    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
-      print("bannerViewWillPresentScreen")
-    }
-
-    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
-      print("bannerViewWillDIsmissScreen")
-    }
-
-    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
-      print("bannerViewDidDismissScreen")
-    }
-
-    func addBannerViewToView(_ bannerView: GADBannerView) {
-            bannerView.translatesAutoresizingMaskIntoConstraints = true
-            view.addSubview(bannerView)
-            view.addConstraints(
-                [NSLayoutConstraint(item: bannerView,
-                                    attribute: .bottom,
-                                    relatedBy: .equal,
-                                    toItem: bottomLayoutGuide,
-                                    attribute: .top,
-                                    multiplier: 1,
-                                    constant: 0),
-                 NSLayoutConstraint(item: bannerView,
-                                    attribute: .centerX,
-                                    relatedBy: .equal,
-                                    toItem: view,
-                                    attribute: .centerX,
-                                    multiplier: 1,
-                                    constant: 0)
-            ])
-        }
 }
 
 

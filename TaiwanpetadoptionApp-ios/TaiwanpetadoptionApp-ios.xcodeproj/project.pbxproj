@@ -15,6 +15,8 @@
 		044487DC2744D5F7003B5236 /* PetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487DB2744D5F7003B5236 /* PetData.swift */; };
 		044487DE2744E2DE003B5236 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487DD2744E2DE003B5236 /* DateItem.swift */; };
 		044487E02745F18D003B5236 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044487DF2745F18D003B5236 /* GoogleService-Info.plist */; };
+		044487E227462BEA003B5236 /* ShareDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487E127462BEA003B5236 /* ShareDetailViewController.swift */; };
+		044487E6274B8A84003B5236 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044487E5274B8A84003B5236 /* BaseViewController.swift */; };
 		0451EFF327425F4800019B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF227425F4800019B20 /* AppDelegate.swift */; };
 		0451EFF527425F4800019B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF427425F4800019B20 /* SceneDelegate.swift */; };
 		0451EFF727425F4800019B20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451EFF627425F4800019B20 /* ViewController.swift */; };
@@ -104,6 +106,8 @@
 		044487DB2744D5F7003B5236 /* PetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetData.swift; sourceTree = "<group>"; };
 		044487DD2744E2DE003B5236 /* DateItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
 		044487DF2745F18D003B5236 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		044487E127462BEA003B5236 /* ShareDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareDetailViewController.swift; sourceTree = "<group>"; };
+		044487E5274B8A84003B5236 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0451EFF027425F4800019B20 /* TaiwanpetadoptionApp.Clip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaiwanpetadoptionApp.Clip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0451EFF227425F4800019B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0451EFF427425F4800019B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -287,10 +291,12 @@
 				0451F0282743B19200019B20 /* AddDateViewController.swift */,
 				044487D22744A491003B5236 /* FirebaseDatabaseManager.swift */,
 				044487D42744A4CC003B5236 /* DateManager.swift */,
+				044487E127462BEA003B5236 /* ShareDetailViewController.swift */,
 				044487D62744CFCF003B5236 /* LoginViewController.swift */,
 				044487D82744D0E2003B5236 /* NotificationManager.swift */,
 				044487DB2744D5F7003B5236 /* PetData.swift */,
 				044487DD2744E2DE003B5236 /* DateItem.swift */,
+				044487E5274B8A84003B5236 /* BaseViewController.swift */,
 			);
 			path = "TaiwanpetadoptionApp-ios";
 			sourceTree = "<group>";
@@ -689,7 +695,9 @@
 				0451F027274359B800019B20 /* ShareViewController.swift in Sources */,
 				044487D52744A4CC003B5236 /* DateManager.swift in Sources */,
 				B74EB89F26BEC75E00FFC732 /* ViewController.swift in Sources */,
+				044487E227462BEA003B5236 /* ShareDetailViewController.swift in Sources */,
 				044487DC2744D5F7003B5236 /* PetData.swift in Sources */,
+				044487E6274B8A84003B5236 /* BaseViewController.swift in Sources */,
 				044487D32744A491003B5236 /* FirebaseDatabaseManager.swift in Sources */,
 				048C1B0E26CF97C700250B01 /* DetailViewController.swift in Sources */,
 				044487D92744D0E2003B5236 /* NotificationManager.swift in Sources */,
@@ -1034,7 +1042,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFEF760704ECCE67A4455EDF /* Pods-TaiwanpetadoptionApp-ios.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "TaiwanpetadoptionApp-ios/TaiwanpetadoptionApp-ios.entitlements";
@@ -1131,7 +1139,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47DD40646A709D1A142765B5 /* Pods-TaiwanpetadoptionApp-ios.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "TaiwanpetadoptionApp-ios/TaiwanpetadoptionApp-ios.entitlements";
@@ -1228,7 +1236,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31B2EB0845650FEFF9CF326C /* Pods-TaiwanpetadoptionApp-iosTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
@@ -1251,7 +1259,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B635109B42AB236F0B4C3D4D /* Pods-TaiwanpetadoptionApp-iosTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
@@ -1274,7 +1282,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48EE440318F26BDA7D1634AF /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
 				INFOPLIST_FILE = "TaiwanpetadoptionApp-iosUITests/Info.plist";
@@ -1295,7 +1303,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A50AED3E2C3CE5E206524C59 /* Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9SDG9LYLGC;
 				INFOPLIST_FILE = "TaiwanpetadoptionApp-iosUITests/Info.plist";

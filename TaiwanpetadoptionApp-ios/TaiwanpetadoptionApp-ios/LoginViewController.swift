@@ -31,8 +31,6 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
         if Auth.auth().currentUser != nil {
           // User is signed in.
             let user = Auth.auth().currentUser
-            print("jack",user?.uid)
-
             dissmissView()
 
         }
