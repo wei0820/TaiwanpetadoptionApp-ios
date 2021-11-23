@@ -6,8 +6,14 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class BaseViewController: UIViewController {
+
+
+class BaseViewController: UIViewController , GADBannerViewDelegate{
+
+    var bannerView: GADBannerView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +25,60 @@ class BaseViewController: UIViewController {
             
                  // Fallback on earlier versions
              }
+        // In this case, we instantiate the banner with desired ad size.
+        bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+
+        addBannerViewToView(bannerView)
         
+        bannerView.adUnitID = "ca-app-pub-7019441527375550/3052866419"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+
         
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+          [NSLayoutConstraint(item: bannerView,
+                              attribute: .bottom,
+                              relatedBy: .equal,
+                              toItem: bottomLayoutGuide,
+                              attribute: .top,
+                              multiplier: 1,
+                              constant: 0),
+           NSLayoutConstraint(item: bannerView,
+                              attribute: .centerX,
+                              relatedBy: .equal,
+                              toItem: view,
+                              attribute: .centerX,
+                              multiplier: 1,
+                              constant: 0)
+          ])
+       }
+    func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
+      print("jack","bannerViewDidReceiveAd")
     }
-    */
 
+    func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
+      print("jack","bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
+      print("jack","bannerViewDidRecordImpression")
+    }
+
+    func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("jack","bannerViewWillPresentScreen")
+    }
+
+    func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("jack","bannerViewWillDIsmissScreen")
+    }
+
+    func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("jack","bannerViewDidDismissScreen")
+    }
 }

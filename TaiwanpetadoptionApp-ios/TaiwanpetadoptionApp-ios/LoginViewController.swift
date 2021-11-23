@@ -10,7 +10,7 @@ import AuthenticationServices
 import CryptoKit
 import Security
 import Firebase
-class LoginViewController: BaseViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
+class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
     @IBOutlet weak var appleLoginButton: UIButton!
     fileprivate var currentNonce: String?
     let notificationManager : NotificationManager = NotificationManager()
@@ -31,8 +31,6 @@ class LoginViewController: BaseViewController ,ASAuthorizationControllerDelegate
         if Auth.auth().currentUser != nil {
           // User is signed in.
             let user = Auth.auth().currentUser
-            print("jack",user?.uid)
-
             dissmissView()
 
         }
