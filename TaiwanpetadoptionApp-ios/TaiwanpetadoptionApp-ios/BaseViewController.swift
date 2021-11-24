@@ -23,9 +23,7 @@ class BaseViewController: UIViewController , GADBannerViewDelegate{
         overrideUserInterfaceStyle = .light
         } else {
             
-                 // Fallback on earlier versions
              }
-        // In this case, we instantiate the banner with desired ad size.
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
 
         addBannerViewToView(bannerView)
