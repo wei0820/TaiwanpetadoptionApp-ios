@@ -218,5 +218,8 @@
     <string> App 需要您的同意, 才能始終訪問位置</string>
     <key>Privacy - Location Always Usage Description</key>
     <string> App 需要您的同意, 才能始終訪問位置</string>
+    
+    <key>UIUserInterfaceStyle</key>
+    <string>Light</string>
 </dict>
 </plist>

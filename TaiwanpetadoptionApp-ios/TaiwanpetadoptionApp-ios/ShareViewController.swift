@@ -80,7 +80,6 @@ class ShareViewController: BaseViewController , UITableViewDataSource, UITableVi
         
         setActionButton()
         getData()
-        
     
     }
     
@@ -96,7 +95,6 @@ class ShareViewController: BaseViewController , UITableViewDataSource, UITableVi
                              for item in snapshot.children {
             
                                  let data = DateItem(snapshot: item as! DataSnapshot)
-                                print("jack",data.name)
                                 
                                 self.dateItem.append(data)
                                  
@@ -123,10 +121,17 @@ class ShareViewController: BaseViewController , UITableViewDataSource, UITableVi
     func  setActionButton() -> Void{
          
          let actionButton = JJFloatingActionButton()
+        
          
          actionButton.addItem(title: "新增", image: UIImage(named: "create")?.withRenderingMode(.alwaysTemplate)) { item in
-            
-            self.setJump(type: "adddate")
+            if(!self.checkLogin()){
+                self.setLoginAlert()
+                
+            }else{
+                self.setJump(type: "adddate")
+
+            }
+
          }
          
          
@@ -183,4 +188,27 @@ class ShareViewController: BaseViewController , UITableViewDataSource, UITableVi
     
 
    }
+    
+    func checkLogin() -> Bool{
+        var isLogin = false
+        if Auth.auth().currentUser != nil {
+            
+            isLogin = true
+       
+        } else {
+            isLogin = false
+
+        }
+        return isLogin
+    }
+    
+    
+    func setLoginAlert(){
+        
+        let controller = UIAlertController(title: "提醒", message:"您尚未登入,請先登入後再發文", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "我知道了", style: .default, handler: nil)
+        controller.addAction(okAction)
+                
+        present(controller, animated: true, completion: nil)
+    }
 }
