@@ -28,6 +28,9 @@ pod 'Toaster'
 pod 'Firebase/Storage'
 pod 'Firebase/Analytics' 
 pod 'JXBanner'
+pod 'RxSwift', '~> 5'
+pod 'RxCocoa', '~> 5'
+pod 'RxBlocking', '~> 5'
 
 
 end

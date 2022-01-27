@@ -7,7 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
-
+import RxSwift
 
 
 class BaseViewController: UIViewController , GADBannerViewDelegate{
@@ -24,6 +24,8 @@ class BaseViewController: UIViewController , GADBannerViewDelegate{
         } else {
             
              }
+        
+
         bannerView = GADBannerView(adSize: kGADAdSizeBanner)
 
         addBannerViewToView(bannerView)
@@ -31,8 +33,8 @@ class BaseViewController: UIViewController , GADBannerViewDelegate{
         bannerView.adUnitID = "ca-app-pub-7019441527375550/3052866419"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
-
-        
+    
+    
     }
     
 

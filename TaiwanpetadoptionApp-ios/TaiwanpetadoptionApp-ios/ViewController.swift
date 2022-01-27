@@ -11,6 +11,7 @@ import AppTrackingTransparency
 import AdSupport
 import GoogleMobileAds
 import JGProgressHUD
+import RxSwift
 
 class ViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate{
     var refreshControl:UIRefreshControl!
@@ -105,6 +106,7 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
 
             }
             
+            
         }
 
 
@@ -119,6 +121,8 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
            }
         }
         task.resume()
+
+        
     }
 
 
@@ -171,10 +175,28 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
     controller?.shelter_name = arrayData[indexPath!.row].shelter_name
     controller?.shelter_address = arrayData[indexPath!.row].shelter_address
     controller?.shelter_tel = arrayData[indexPath!.row].shelter_tel
+       
     
 
    }
-
+    func isEven(number: Int) -> Observable<Int> {
+        // 1
+        return Observable.create { observer in
+            
+            if number % 2 == 0 {
+                  // 2
+                observer.onNext(number)
+                observer.onCompleted()
+            } else {
+                  // 3
+                observer.onError(NSError.init(domain: "不是偶數", code: 401, userInfo: nil))
+            }
+            // 4
+            return Disposables.create()
+            
+            
+        }
+    }
 }
 
 
