@@ -10,7 +10,7 @@ import AuthenticationServices
 import CryptoKit
 import Security
 import Firebase
-class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
+class LoginViewController: BaseViewController ,ASAuthorizationControllerDelegate,ASAuthorizationControllerPresentationContextProviding{
     @IBOutlet weak var appleLoginButton: UIButton!
     fileprivate var currentNonce: String?
     let notificationManager : NotificationManager = NotificationManager()
@@ -22,6 +22,7 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkNet()
         checkLoginState()
     
 
@@ -39,7 +40,7 @@ class LoginViewController: UIViewController ,ASAuthorizationControllerDelegate,A
     
     
     
-    func setJump(type:String){
+    override func setJump(type:String){
          
          if let controller = storyboard?.instantiateViewController(withIdentifier: type) {
                     present(controller, animated: true, completion: nil)

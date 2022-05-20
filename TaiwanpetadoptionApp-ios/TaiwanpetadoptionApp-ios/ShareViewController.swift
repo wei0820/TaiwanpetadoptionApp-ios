@@ -160,7 +160,7 @@ class ShareViewController: BaseViewController , UITableViewDataSource, UITableVi
      }
      
     
-    func setJump(type:String){
+    override func setJump(type:String){
          
          if let controller = storyboard?.instantiateViewController(withIdentifier: type) {
                     present(controller, animated: true, completion: nil)

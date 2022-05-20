@@ -12,10 +12,11 @@ import AdSupport
 import GoogleMobileAds
 import JGProgressHUD
 import RxSwift
-
+import Kingfisher
 class ViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate{
     var refreshControl:UIRefreshControl!
-    
+    var adBannerView: GADBannerView?
+
     var pathUrl = "https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL"
     @IBOutlet weak var bannerVIew: UIView!
     var myIndex : IndexPath = IndexPath()
@@ -46,8 +47,11 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
             }
         if(!arrayData[indexPath.row].album_file.isEmpty){
             
-            loadUrl(url: arrayData[indexPath.row].album_file, imageView: cell.dataImage)
             
+            let url = URL(string: arrayData[indexPath.row].album_file)
+            cell.dataImage.kf.setImage(with: url)
+        
+
         }else{
             cell.dataImage.image = UIImage(named: "iconerror")
         }
@@ -63,14 +67,14 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setAdBanner()
         getData()
 
         tableView.dataSource = self
         tableView.delegate = self
         
         refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "更新中...")
+        refreshControl.attributedTitle = NSAttributedString(string: "請稍候")
                
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControl.Event.valueChanged)
         tableView.addSubview(refreshControl)
@@ -140,7 +144,7 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
         }.downloadProgress { progress in
             hud.setProgress(Float(progress.fractionCompleted), animated: true)
             hud.shadow = JGProgressHUDShadow(color: .black, offset: .zero, radius: 5.0, opacity: 0.2)
-            hud.textLabel.text = "讀取中"
+            hud.textLabel.text = "請稍候"
             hud.detailTextLabel.text = String(format: "%.0f",(progress.fractionCompleted * 100)) + "%"
             hud.show(in: self.view)
             if(Float(progress.fractionCompleted) == 1.0){
@@ -151,6 +155,48 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
         }
         
     }
+    
+    func setAdBanner(){
+        let id = "ca-app-pub-7019441527375550/7031408367"
+        adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView!.adUnitID = id
+        adBannerView!.delegate = self
+        adBannerView!.rootViewController = self
+        adBannerView!.load(GADRequest())
+    }
+    // MARK: - GADBannerViewDelegate
+     // Called when an ad request loaded an ad.
+     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+       print(#function)
+     }
+
+     // Called when an ad request failed.
+     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: NSError) {
+       print("ViewController",(error.localizedDescription))
+     }
+
+     // Called just before presenting the user a full screen view, such as a browser, in response to
+     // clicking on an ad.
+     func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+       print(#function)
+     }
+
+     // Called just before dismissing a full screen view.
+     func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+       print(#function)
+     }
+
+     // Called just after dismissing a full screen view.
+     func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+       print(#function)
+     }
+
+     // Called just before the application will background or exit because the user clicked on an
+     // ad that will launch another application (such as the App Store).
+     func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+       print(#function)
+     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         myIndex = IndexPath(row: indexPath.section, section: indexPath.row)
@@ -200,3 +246,19 @@ class ViewController: BaseViewController, UITableViewDataSource, UITableViewDele
 }
 
 
+
+extension UIImageView {
+    func loadFrom(URLAddress: String) {
+        guard let url = URL(string: URLAddress) else {
+            return
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            if let imageData = try? Data(contentsOf: url) {
+                if let loadedImage = UIImage(data: imageData) {
+                    self?.image = loadedImage
+                }
+            }
+        }
+    }
+}
