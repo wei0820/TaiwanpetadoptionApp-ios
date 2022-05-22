@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key> NSLocationAlwaysUsageDescription </key>
+	<string>需要您的同意,才能使用,讓您可提供位置給認養人知道該資訊</string>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>zh_TW</string>
 	<key>CFBundleDisplayName</key>
 	<string>台灣動物認養APP</string>
 	<key>CFBundleExecutable</key>
@@ -18,8 +20,31 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb527246639058821</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.143657594338-reu3692ep1fredc7l68s2dlt1n304iif</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>527246639058821</string>
+	<key>FacebookClientToken</key>
+	<string>873a11777210b7a3a56fd7a7fae75b3d</string>
+	<key>FacebookDisplayName</key>
+	<string>台灣動物認養app</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-7019441527375550~5820492375</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -28,13 +53,18 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSAllowsArbitraryLoadsForMedia</key>
-		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>需要您的同意,才能使用,讓您可提供位置給認養人知道該資訊</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要您的同意,才能使用,讓您可提供位置給認養人知道該資訊</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要您的同意,才能使用,讓您可發佈相機膠卷內的寵物圖像提供給人認養
+</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>This identifier will be used to deliver personalized ads to you.</string>
+	<key>Privacy - Location Always Usage Description</key>
+	<string>需要您的同意,才能使用,讓您可提供位置給認養人知道該資訊</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -209,14 +239,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <key> NSLocationAlwaysUsageDescription </key>
-    <string> App 需要您的同意, 才能始終訪問位置</string>
-    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-    <string> App 需要您的同意, 才能始終訪問位置</string>
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string> App 需要您的同意, 才能始終訪問位置</string>
-    <key>Privacy - Location Always Usage Description</key>
-    <string> App 需要您的同意, 才能始終訪問位置</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

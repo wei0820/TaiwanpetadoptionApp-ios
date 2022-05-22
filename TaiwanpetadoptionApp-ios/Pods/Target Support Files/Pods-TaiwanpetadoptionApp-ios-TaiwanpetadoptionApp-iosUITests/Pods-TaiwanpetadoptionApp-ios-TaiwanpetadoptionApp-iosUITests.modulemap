@@ -1,0 +1,6 @@
+framework module Pods_TaiwanpetadoptionApp_ios_TaiwanpetadoptionApp_iosUITests {
+  umbrella header "Pods-TaiwanpetadoptionApp-ios-TaiwanpetadoptionApp-iosUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

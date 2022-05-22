@@ -12,6 +12,7 @@ import FirebaseDatabase
 import CLImagePickerTool
 import Firebase
 import Toaster
+import RxSwift
 
 class AddDateViewController: BaseViewController , CLLocationManagerDelegate,UITextFieldDelegate,UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -76,7 +77,7 @@ class AddDateViewController: BaseViewController , CLLocationManagerDelegate,UITe
         getUserLoction()
         setTF()
         setPicker()
-
+        
 
         
 
@@ -86,7 +87,7 @@ class AddDateViewController: BaseViewController , CLLocationManagerDelegate,UITe
         
         pickerView.delegate = self
         pickerView.dataSource  = self
-        
+                
         }
     
     func setTF(){
@@ -103,7 +104,6 @@ class AddDateViewController: BaseViewController , CLLocationManagerDelegate,UITe
         addTF.returnKeyType = .done
         addTF.delegate  = self
 
-        
         
         
         detailTF.placeholder = "請輸入內容"
@@ -410,6 +410,19 @@ extension AddDateViewController: UIImagePickerControllerDelegate, UINavigationCo
          
      }
     
-    
+    //驗證手機號
+    class func isPhoneNumber(phoneNumber:String) -> Bool {
+        if phoneNumber.count == 0 {
+            return false
+        }
+        let mobile = "^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$"
+        let regexMobile = NSPredicate(format: "SELF MATCHES %@",mobile)
+        if regexMobile.evaluate(with: phoneNumber) == true {
+            return true
+        }else
+        {
+            return false
+        }
+    }
     
 }
