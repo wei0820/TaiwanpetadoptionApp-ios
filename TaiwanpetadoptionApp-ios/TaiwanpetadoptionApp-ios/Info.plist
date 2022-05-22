@@ -2,11 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key> NSLocationAlwaysUsageDescription </key>
 	<string>需要您的同意,才能使用,讓您可提供位置給認養人知道該資訊</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -28,6 +23,12 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb527246639058821</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
@@ -38,10 +39,21 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>527246639058821</string>
+	<key>FacebookClientToken</key>
+	<string>873a11777210b7a3a56fd7a7fae75b3d</string>
+	<key>FacebookDisplayName</key>
+	<string>台灣動物認養app</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-7019441527375550~5820492375</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>需要您的同意,才能使用,讓您可提供位置給認養人知道該資訊</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

@@ -9,37 +9,54 @@ import UIKit
 import Firebase
 
 class UserPhoneLoginViewController: UIViewController {
-
+    @IBOutlet weak var verificationCodeText: UITextField!
+    
+    @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var userPhoneNumber: UITextField!
     @IBOutlet weak var getVerificationCode: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         userPhoneNumber.keyboardType = .phonePad
-        setupGradientBackground()
-        
+        setupGradientBackground(button: getVerificationCode,title: "驗證")
+        setupGradientBackground(button: sendButton,title: "送出")
+        sendButton.isEnabled = false
+        sendButton.alpha = 0.5
+
         
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func sendAction(_ sender: Any) {
+    }
     @IBAction func getVerificationCodeAction(_ sender: Any) {
         
-        PhoneAuthProvider.provider().verifyPhoneNumber( userPhoneNumber.text!, uiDelegate: nil) { (verificationID, error) in
+        if(userPhoneNumber.text != nil && !userPhoneNumber.text!.isEmpty){
+                 if(userPhoneNumber.text!.count >= 11){
+                     return
+                 }
+                 
+        var phonenumber : String = String(userPhoneNumber.text!.suffix(9))
+            print("Jack",phonenumber)
+
+        
+        
+        PhoneAuthProvider.provider().verifyPhoneNumber(phonenumber, uiDelegate: nil) { (verificationID, error) in
                     if let error = error {
-                        print("error")
 
                         print("Jack",error.localizedDescription)
 
                         return
                     }
-                    // Sign in using the verificationID and the code sent to the user
-                    UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
-      
+            print("Jack",verificationID)
+
+            self.sendButton.isEnabled = true
+            self.sendButton.alpha = 1
 
                     // ...
                 }
                 Auth.auth().languageCode = "tw";
 
-        
+        }
         
     }
     
@@ -53,12 +70,11 @@ class UserPhoneLoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    func setupGradientBackground() {
-//        getVerificationCode.isEnabled = false
-//        getVerificationCode.alpha = 0.5
+    func setupGradientBackground(button : UIButton,title :String) {
+
 
         let gradientLayer = CAGradientLayer()
-       gradientLayer.frame.size = getVerificationCode.frame.size
+       gradientLayer.frame.size = button.frame.size
         gradientLayer.colors = [
            UIColor(red: 0.56, green: 0, blue: 1, alpha: 1).cgColor,
 
@@ -73,8 +89,8 @@ class UserPhoneLoginViewController: UIViewController {
 
        gradientLayer.endPoint = CGPoint(x: 0.75, y: 0.5)
        
-        getVerificationCode.layer.addSublayer(gradientLayer)
-        getVerificationCode.setTitle("取得驗證碼", for: .normal)
+        button.layer.addSublayer(gradientLayer)
+        button.setTitle(title, for: .normal)
 
         
 

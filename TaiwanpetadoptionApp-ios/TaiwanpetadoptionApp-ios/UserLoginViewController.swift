@@ -42,10 +42,34 @@ class UserLoginViewController: UIViewController, ASAuthorizationControllerPresen
         initAppleIdLogin()
         initUserPhoneLogin()
         initLineLogin()
+  
         
         
         
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if Auth.auth().currentUser != nil {
+          // User is signed in.
+            print("UserLoginViewController"," User is signed in.")
+            let user = Auth.auth().currentUser
+            if let user = user {
+              // The user's ID, unique to the Firebase project.
+              // Do NOT use this value to authenticate with your backend server,
+              // if you have one. Use getTokenWithCompletion:completion: instead.
+              let uid = user.uid
+                print("UserLoginViewController",uid)
+                self.nextPage()
+
+            }
+              // ...
+          // ...
+        } else {
+          
+          // ...
+            print("UserLoginViewController","// No user is signed in.")
+
+        }
     }
     func setViewGradientLayer(){
         
@@ -71,7 +95,6 @@ class UserLoginViewController: UIViewController, ASAuthorizationControllerPresen
         let manager = LoginManager()
         manager.logIn(permissions: [.publicProfile], viewController: self) { (result) in
             if case LoginResult.success(granted: _, declined: _, token: let token) = result {
-                print("fb login ok")
                 
                 let credential =  FacebookAuthProvider.credential(withAccessToken: token!.tokenString)
                 Auth.auth().signIn(with: credential) { [weak self] (result, error) in
@@ -81,6 +104,8 @@ class UserLoginViewController: UIViewController, ASAuthorizationControllerPresen
                         return
                     }
                     print("login ok")
+                    self.nextPage()
+
                 }
                 
             } else {
@@ -138,7 +163,8 @@ class UserLoginViewController: UIViewController, ASAuthorizationControllerPresen
                 }
                 // User is signed in
                 print("jack","User is signed in")
-                
+                self.nextPage()
+
 
                 // ...
             }
@@ -299,6 +325,7 @@ extension UserLoginViewController: ASAuthorizationControllerDelegate {
             // User is signed in
             print("jack","User is signed in")
             
+            self.nextPage()
 
             // ...
         }

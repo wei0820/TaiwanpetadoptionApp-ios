@@ -21,6 +21,8 @@ class DataTableViewCell: UITableViewCell{
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        dataImage.layer.cornerRadius = dataImage.frame.height/4
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,5 +30,6 @@ class DataTableViewCell: UITableViewCell{
 
         // Configure the view for the selected state
     }
+    
     
 }
