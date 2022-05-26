@@ -180,12 +180,22 @@ class ShareViewController: BaseViewController , UITableViewDataSource, UITableVi
 
         let controller = segue.destination as? ShareDetailViewController
         let indexPath = tableView.indexPathForSelectedRow
-        controller?.album_file = dateItem[indexPath!.row].url_1
-
-        controller?.shelter_name = dateItem[indexPath!.row].name
-        controller?.shelter_address = dateItem[indexPath!.row].address
-        controller?.shelter_tel = dateItem[indexPath!.row].phone
-    
+       controller?.id = dateItem[indexPath!.row].id
+       controller?.name = dateItem[indexPath!.row].name
+       controller?.address = dateItem[indexPath!.row].address
+       controller?.lat = dateItem[indexPath!.row].lat
+       controller?.lon = dateItem[indexPath!.row].lat
+       controller?.uuid = dateItem[indexPath!.row].uuid
+       controller?.date = dateItem[indexPath!.row].date
+       controller?.like = dateItem[indexPath!.row].like
+       controller?.unlike = dateItem[indexPath!.row].unlike
+       controller?.usermessage = dateItem[indexPath!.row].usermessage
+       controller?.key  = dateItem[indexPath!.row].key
+       controller?.url_1 = dateItem[indexPath!.row].url_1
+       controller?.url_2 = dateItem[indexPath!.row].url_2
+       controller?.url_3 = dateItem[indexPath!.row].url_3
+       controller?.type = dateItem[indexPath!.row].type
+       controller?.phone = dateItem[indexPath!.row].phone
 
    }
     

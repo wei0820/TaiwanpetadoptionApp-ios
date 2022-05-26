@@ -20,6 +20,7 @@ class UserLoginViewController: UIViewController, ASAuthorizationControllerPresen
  
 
 
+    @IBOutlet weak var rightView: UIView!
     
     @IBOutlet weak var fbLoginView: UIView!
     
@@ -77,13 +78,24 @@ class UserLoginViewController: UIViewController, ASAuthorizationControllerPresen
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame.size = view.frame.size
         gradientLayer.colors = [
-            UIColor(red: 0.56, green: 0, blue: 1, alpha: 1).cgColor,
-            UIColor(red: 0.038, green: 1, blue: 0.827, alpha: 1).cgColor]
+            UIColor(red: 0.9, green: 0, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.2, green: 1, blue: 0.6, alpha: 1).cgColor]
         
         mView.layer.addSublayer(gradientLayer)
         self.mView.layer.cornerRadius = CGFloat(80)
         self.mView.clipsToBounds = true
         self.mView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+        let gradientLayer2 = CAGradientLayer()
+        gradientLayer2.frame.size = view.frame.size
+        gradientLayer2.colors = [
+            UIColor(red: 0.56, green: 0, blue: 1, alpha: 1).cgColor,
+            UIColor(red: 0.038, green: 1, blue: 0.827, alpha: 1).cgColor]
+        
+        
+        rightView.layer.addSublayer(gradientLayer2)
+        self.rightView.layer.cornerRadius = CGFloat(80)
+        self.rightView.clipsToBounds = true
+        self.rightView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner]
         
     }
     func initFbLogin(){
